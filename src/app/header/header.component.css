@@ -1,12 +1,22 @@
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
-.nav h1 {
-  color: "black";
-  margin: 0;
+.nav p {
+  color: white;
+  margin-left: 10px;
   font-size: 40px;
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 .nav .nav-search {
@@ -21,14 +31,16 @@
   flex: 1;
   color: black;
   border: 1px solid grey;
-  height: 35px;
+  height: 30px;
   border-right: none;
+  border-radius: 5px;
 }
 
 .nav .nav-search button {
   color: black;
-  border: 1px solid blueviolet;
-  height: 39px;
+  border: 1px solid grey;
+  height: 30px;
+  border-radius: 5px;
 }
 
 .nav ul {
@@ -41,9 +53,15 @@
 .nav ul li {
   padding-left: 15px;
   padding-top: 15px;
+  margin-right: 25px;
 }
 
 .nav ul li a {
   text-decoration: none;
-  color: violetblue;
+  color: white;
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }

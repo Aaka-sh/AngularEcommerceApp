@@ -1,8 +1,15 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: "sans-serif";
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
 }
 
 .container {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 0;
+  padding: 0px;
 }
