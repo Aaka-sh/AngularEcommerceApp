@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { SellerAutnComponent } from './seller-autn/seller-autn.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { SellerAutnComponent } from './seller-autn/seller-autn.component';
     SellerAuthComponent,
     SellerAutnComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
     provideClientHydration(withEventReplay()),
     provideHttpClient(withFetch()),
