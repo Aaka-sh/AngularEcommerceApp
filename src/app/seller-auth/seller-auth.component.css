@@ -1,9 +1,27 @@
+.seller-auth {
+  display: flex;
+  height: calc(100vh - 50px);
+}
+
+.seller-design,
 .sign-up {
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.sign-up h1 {
-  margin-top: 100px;
-  margin-bottom: 80px;
-  color: blueviolet;
+.seller-design {
+  width: 40%;
+  background-color: #e0e0e0;
+}
+
+.sign-up {
+  width: 60%;
+  background-color: #f4f4f4;
 }

@@ -24,14 +24,15 @@ body {
 .form-input {
   height: 35px;
   margin-bottom: 20px;
-  border: 1px solid blueviolet;
+  border: 1px solid grey;
   padding-left: 15px;
-  color: blueviolet;
+  color: grey;
 }
 
 .form-button {
   height: 35px;
-  border: 1px solid blueviolet;
-  color: blueviolet;
+  border: 1px solid grey;
+  background-color: black;
+  color: white;
   cursor: pointer;
 }
