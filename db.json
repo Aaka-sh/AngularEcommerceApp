@@ -11,6 +11,18 @@
       "name": "prerana",
       "email": "prerana@seller.com",
       "password": "prerana"
+    },
+    {
+      "id": "81cb",
+      "username": "Dev",
+      "email": "dev@dev.com",
+      "password": "dev"
+    },
+    {
+      "id": "3845",
+      "username": "rahul",
+      "email": "rahul@abc.com",
+      "password": "rahul"
     }
   ]
 }
