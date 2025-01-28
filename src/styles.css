@@ -49,3 +49,7 @@ body {
   transform: rotateX(5deg) rotateY(3deg) rotateZ(0.25deg);
   box-shadow: none;
 }
+
+.error-p {
+  color: red;
+}

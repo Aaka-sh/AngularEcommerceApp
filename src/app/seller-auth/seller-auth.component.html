@@ -49,6 +49,7 @@
   <!-- log in form -->
   <div *ngIf="showLogin" class="login">
     <h1>LOG IN!</h1>
+    <p class="error-p">{{ authError }}</p>
     <form
       class="common-form"
       #sellerLogin="ngForm"

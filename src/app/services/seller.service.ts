@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { signUp } from '../data-type';
+import { signUp, login } from '../data-type';
 import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
 
@@ -8,7 +8,10 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class SellerService {
+  //flag that tells whether the seller is logged in or not
   isSellerLoggedIn = new BehaviorSubject<boolean>(false);
+  //this flag will be set to true when a login error occurs
+  isLoginEmitter = new EventEmitter<boolean>(false);
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -30,5 +33,24 @@ export class SellerService {
       this.isSellerLoggedIn.next(true);
       this.router.navigate(['seller-home']);
     }
+  }
+
+  userLogin(data: login) {
+    this.http
+      .get(
+        `http://localhost:3000/seller?email=${data.email}&password=${data.password}`,
+        { observe: 'response' }
+      )
+      .subscribe((result: any) => {
+        // console.warn(result);
+        if (result && result.body && result.body.length === 1) {
+          this.isLoginEmitter.emit(true);
+          localStorage.setItem('seller', JSON.stringify(result.body));
+          this.router.navigate(['seller-home']);
+        } else {
+          console.warn('Login failed');
+          this.isLoginEmitter.emit(true);
+        }
+      });
   }
 }
