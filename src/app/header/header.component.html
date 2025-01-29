@@ -1,15 +1,21 @@
 <nav class="nav">
-  <p>TECHSY</p>
-  <div class="nav-search">
+  <p><a routerLink="/">TECHSY</a></p>
+  <div *ngIf="menuType === 'default'" class="nav-search">
     <input type="text" placeholder="Search" />
     <button>Search</button>
   </div>
-  <nav>
-    <ul>
+  <div [ngSwitch]="menuType">
+    <ul *ngSwitchCase="'default'">
       <li><a routerLink="">HOME</a></li>
       <li><a href="#">LOGIN</a></li>
       <li><a routerLink="/seller-auth">SELLER</a></li>
       <li><a href="#">CART</a></li>
     </ul>
-  </nav>
+    <ul *ngSwitchCase="'seller'">
+      <li><a routerLink="">ADD RPODUCT</a></li>
+      <li><a href="#">LIST</a></li>
+      <li><a routerLink="/seller-auth">LOGOUT</a></li>
+      <li><a href="#">SELLER NAME</a></li>
+    </ul>
+  </div>
 </nav>
