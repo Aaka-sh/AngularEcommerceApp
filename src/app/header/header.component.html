@@ -14,8 +14,10 @@
     <ul *ngSwitchCase="'seller'">
       <li><a routerLink="">ADD RPODUCT</a></li>
       <li><a href="#">LIST</a></li>
-      <li><a routerLink="/seller-auth">LOGOUT</a></li>
-      <li><a href="#">SELLER NAME</a></li>
+      <li><a (click)="logout()">LOGOUT</a></li>
+      <li>
+        <a href="#">HI {{ sellerName | uppercase }}!</a>
+      </li>
     </ul>
   </div>
 </nav>
