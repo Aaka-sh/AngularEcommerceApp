@@ -11,7 +11,6 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SellerAuthComponent } from './seller-auth/seller-auth.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
-import { SellerAutnComponent } from './seller-autn/seller-autn.component';
 import { FormsModule } from '@angular/forms';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
@@ -22,7 +21,6 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
     HeaderComponent,
     HomeComponent,
     SellerAuthComponent,
-    SellerAutnComponent,
     SellerHomeComponent,
     SellerAddProductComponent,
   ],
