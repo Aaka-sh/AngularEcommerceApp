@@ -30,5 +30,25 @@
       "email": "jim@seller.com",
       "password": "jimjam"
     }
+  ],
+  "products": [
+    {
+      "id": "b4a2",
+      "name": "iPhone 13",
+      "price": "65000",
+      "category": "Mobile Phone",
+      "color": "Midnight Blue",
+      "description": "Apple Product",
+      "image": "https://vasanthandco.in/images/productimages/1903__product__Mobiles__apple-mobile-iphone-13-blue-128gb-2.png"
+    },
+    {
+      "id": "002d",
+      "name": "iPhone 14",
+      "price": "95000",
+      "category": "Mobile Phone",
+      "color": "Midnight Blue",
+      "description": "Apple Mobile",
+      "image": "https://vasanthandco.in/images/productimages/1903__product__Mobiles__apple-mobile-iphone-13-blue-128gb-2.png"
+    }
   ]
 }
