@@ -7,7 +7,15 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductService {
   constructor(private http: HttpClient) {}
+
+  //this function will add the product details in the database (fake api)
   addProduct(data: product) {
     return this.http.post('http://localhost:3000/products', data);
+  }
+
+  //this function will get the product details for the product list
+  productList() {
+    //typecast the response into an array of product (interface)
+    return this.http.get<product[]>('http://localhost:3000/products');
   }
 }
