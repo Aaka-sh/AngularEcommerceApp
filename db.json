@@ -42,13 +42,22 @@
       "image": "https://vasanthandco.in/images/productimages/1903__product__Mobiles__apple-mobile-iphone-13-blue-128gb-2.png"
     },
     {
-      "id": "002d",
-      "name": "iPhone 14",
-      "price": "95000",
-      "category": "Mobile Phone",
-      "color": "Midnight Blue",
-      "description": "Apple Mobile",
-      "image": "https://vasanthandco.in/images/productimages/1903__product__Mobiles__apple-mobile-iphone-13-blue-128gb-2.png"
+      "id": "4c79",
+      "name": "Surface Book 2",
+      "price": "222900",
+      "category": "Laptops",
+      "color": "Silver",
+      "description": "Surface Book 2 15-inch Review: Bigger is better | Mashable\n",
+      "image": "https://helios-i.mashable.com/imagery/articles/05acBg7ryKf4VoZKNnDTQwu/images-2.fill.size_2000x1228.v1611693106.jpg"
+    },
+    {
+      "id": "cc66",
+      "name": "iPad Air - 5th Gen",
+      "price": "55600",
+      "category": "Tablets",
+      "color": "Pink",
+      "description": "Apple iPad Air 5th Generation Wi-Fi (10.9 Inch, 64GB, Pink, 2022 model)",
+      "image": "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1685968471/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/264353_nx2kb9.png?tr=w-600"
     }
   ]
 }
