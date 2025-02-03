@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { product } from '../data-type';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-seller-home',
@@ -14,6 +15,8 @@ export class SellerHomeComponent implements OnInit {
   productList: undefined | product[];
   //productMessage after the product is deleted
   productMessage: undefined | string;
+
+  icon = faTrash;
   //instance of product service
   constructor(private product: ProductService) {}
 

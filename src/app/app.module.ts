@@ -14,6 +14,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SellerHomeComponent } from './seller-home/seller-home.component';
 import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { SellerAddProductComponent } from './seller-add-product/seller-add-produ
     SellerHomeComponent,
     SellerAddProductComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, FontAwesomeModule],
   providers: [
     provideClientHydration(withEventReplay()),
     provideHttpClient(withFetch()),
