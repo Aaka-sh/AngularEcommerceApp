@@ -12,6 +12,8 @@ import { product } from '../data-type';
   styleUrl: './seller-update-product.component.css',
 })
 export class SellerUpdateProductComponent {
+  //message to be displayed when the update is successful
+  updateProductMessage: undefined | string;
   //this variable will store all the product data (type is product interface)
   productData: undefined | product;
   //activated route is a service that allows to access information about the currently
@@ -33,5 +35,20 @@ export class SellerUpdateProductComponent {
       });
   }
 
-  submit(data: any) {}
+  submit(data: any) {
+    if (this.productData) {
+      data.id = this.productData.id;
+    }
+    //calling the update product function from the product instance
+    this.product.updateProduct(data).subscribe((result) => {
+      if (result) {
+        this.updateProductMessage = 'PRODUCT IS SUCCESSFULLY UPDATED';
+      }
+    });
+
+    setTimeout(() => {
+      this.updateProductMessage = undefined;
+    }, 3000);
+    console.warn(data);
+  }
 }
