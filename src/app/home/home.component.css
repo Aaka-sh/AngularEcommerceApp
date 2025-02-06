@@ -1,4 +1,7 @@
-.product-slider-image {
+.home-slider {
+  width: 100vw;
+}
+.home-slider .product-slider-image {
   object-fit: contain;
   height: 600px;
   width: 100%;

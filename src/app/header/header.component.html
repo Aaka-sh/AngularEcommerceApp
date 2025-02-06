@@ -1,8 +1,11 @@
-<nav class="nav">
-  <p><a routerLink="/">TECHSY</a></p>
+<nav class="navbar">
+  <div class="navbar-logo">
+    <a routerLink="/">TECHSY</a>
+  </div>
   <div *ngIf="menuType === 'default'" class="nav-search">
     <input type="text" placeholder="Search" />
-    <button>Search</button>
+
+    <button><fa-icon [icon]="searchIcon"></fa-icon></button>
   </div>
   <div [ngSwitch]="menuType">
     <ul *ngSwitchCase="'default'">

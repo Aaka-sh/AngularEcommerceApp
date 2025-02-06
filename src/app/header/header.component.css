@@ -1,25 +1,43 @@
-.nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: black;
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 100vw;
 }
 
-.nav p {
+.navbar .navbar-logo {
   color: white;
-  margin-left: 10px;
+  margin-left: 20px;
+  font-size: 40px;
+  font-family: "Roboto", serif;
+}
+
+.navbar .navbar-logo a {
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto", serif;
+}
+
+.navbar .navbar-logo a:hover {
+  cursor: pointer;
+}
+
+/* .navbar .navbar-logo a {
+  color: white;
+  background-color: yellow;
+  margin-left: 20px;
   font-size: 40px;
   font-family: "Roboto", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
-}
+  font-variation-settings: "width" 100;
+} */
 
-.nav .nav-search {
+.navbar .nav-search {
   flex: 1;
   display: flex;
   margin-top: 5px;
@@ -27,47 +45,44 @@
   margin-right: 5%;
 }
 
-.nav .nav-search input {
+.navbar .nav-search input {
   flex: 1;
   color: black;
-  border: 1px solid grey;
+  border: 1px solid white;
   height: 30px;
   border-right: none;
-  border-radius: 5px;
+  border-radius: 3px 0px 0px 3px;
+  padding-left: 15px;
 }
 
-.nav .nav-search button {
+.navbar .nav-search button {
   color: black;
-  border: 1px solid grey;
+  border: 1px solid white;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 0px 3px 3px 0px;
+  padding: 0px 10px;
 }
 
-.nav ul {
+.navbar ul {
   display: inline-flex;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.nav ul li {
+.navbar ul li {
   padding-left: 15px;
   padding-top: 15px;
   margin-right: 25px;
 }
 
-.nav ul li a {
+.navbar ul li a {
   text-decoration: none;
   color: white;
   font-family: "Roboto", serif;
   font-optical-sizing: auto;
-  font-weight: 100;
+  font-weight: 300;
   font-style: normal;
   font-variation-settings: "wdth" 100;
   cursor: pointer;
-}
-
-p a {
-  text-decoration: none;
-  color: white;
 }

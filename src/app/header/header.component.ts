@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-header',
   standalone: false,
@@ -8,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
+  //search icon
+  searchIcon = faSearch;
   //seller name
   sellerName: string = '';
   //creating a flag-type variable to track whether the seller is logged in or not
