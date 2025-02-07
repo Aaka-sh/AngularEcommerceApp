@@ -1,19 +1,38 @@
 .home-slider {
   width: 100vw;
+  height: 100vh;
 }
+
 .home-slider .product-slider-image {
   object-fit: contain;
   height: 600px;
   width: 100%;
 }
 
+.product-list-wrapper {
+  /* background-color: yellow; */
+  width: 100vw;
+  padding: 50px;
+}
+
+.products-container {
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
 .product-item {
+  /* background-color: blue; */
+
   margin-bottom: 40px;
   border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 .product-item img {
-  width: 100%;
+  width: 300px;
   height: 300px;
   object-fit: contain;
 }
