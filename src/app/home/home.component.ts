@@ -11,12 +11,17 @@ import { product } from '../data-type';
 })
 export class HomeComponent implements OnInit {
   popularProducts: undefined | product[];
+  trendyProducts: undefined | product[];
   constructor(private product: ProductService) {}
 
   ngOnInit() {
     this.product.popularProducts().subscribe((result) => {
-      console.log(result);
+      //console.log(result);
       this.popularProducts = result;
+    });
+    this.product.trendyProducts().subscribe((result) => {
+      //console.log(result);
+      this.trendyProducts = result;
     });
   }
 }
