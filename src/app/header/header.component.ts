@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { ProductService } from '../services/product.service';
+import { product } from '../data-type';
 @Component({
   selector: 'app-header',
   standalone: false,
@@ -15,8 +17,10 @@ export class HeaderComponent {
   sellerName: string = '';
   //creating a flag-type variable to track whether the seller is logged in or not
   menuType: string = 'default';
+  //this will contain the search result
+  searchResult: undefined | product[];
   //creating an instance of Router service
-  constructor(private route: Router) {}
+  constructor(private route: Router, private product: ProductService) {}
   ngOnInit(): void {
     //events method is an observable that emits events related to navigation changes
     this.route.events.subscribe((val: any) => {
@@ -38,5 +42,23 @@ export class HeaderComponent {
   logout() {
     localStorage.removeItem('seller');
     this.route.navigate(['/']);
+  }
+
+  searchProduct(query: KeyboardEvent) {
+    if (query) {
+      const element = query.target as HTMLInputElement;
+      console.log(element.value);
+      this.product.searchProduct(element.value).subscribe((result) => {
+        console.warn(result);
+        if (result.length > 5) {
+          result.length = length;
+        }
+        this.searchResult = result;
+      });
+    }
+  }
+
+  hideSearch() {
+    this.searchResult = undefined;
   }
 }

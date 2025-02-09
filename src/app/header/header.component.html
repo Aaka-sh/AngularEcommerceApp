@@ -3,9 +3,19 @@
     <a routerLink="/">TECHSY</a>
   </div>
   <div *ngIf="menuType === 'default'" class="nav-search">
-    <input type="text" placeholder="Search" />
+    <input
+      type="text"
+      placeholder="Search"
+      (keyup)="searchProduct($event)"
+      (blur)="hideSearch()"
+    />
 
     <button><fa-icon [icon]="searchIcon"></fa-icon></button>
+    <ul class="suggested-search" *ngIf="searchResult">
+      <li *ngFor="let item of searchResult">
+        <a>{{ item.name }}</a>
+      </li>
+    </ul>
   </div>
   <div [ngSwitch]="menuType">
     <ul *ngSwitchCase="'default'">
