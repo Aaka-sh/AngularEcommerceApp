@@ -94,15 +94,17 @@
   display: list-item !important;
   border: 1px solid #ddd;
   background-color: #fff;
-  width: 300px;
 }
 
 .suggested-search li {
   padding: 5px;
+  /* background-color: yellow; */
+  width: inherit;
   border: 1px solid #ddd;
+  border-right: none;
 }
 
 .suggested-search li a {
   cursor: pointer;
-  color: black;
+  color: black !important ;
 }

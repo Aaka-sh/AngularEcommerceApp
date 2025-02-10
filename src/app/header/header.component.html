@@ -9,9 +9,8 @@
       (keyup)="searchProduct($event)"
       (blur)="hideSearch()"
     />
-
     <button><fa-icon [icon]="searchIcon"></fa-icon></button>
-    <ul class="suggested-search" *ngIf="searchResult">
+    <ul class="suggested-search">
       <li *ngFor="let item of searchResult">
         <a>{{ item.name }}</a>
       </li>

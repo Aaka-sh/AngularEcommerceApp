@@ -11,15 +11,12 @@ import { product } from '../data-type';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  //search icon
-  searchIcon = faSearch;
-  //seller name
-  sellerName: string = '';
-  //creating a flag-type variable to track whether the seller is logged in or not
-  menuType: string = 'default';
-  //this will contain the search result
-  searchResult: undefined | product[];
-  //creating an instance of Router service
+  searchIcon = faSearch; //search icon
+  sellerName: string = ''; //seller name
+  menuType: string = 'default'; //creating a flag-type variable to track whether the seller is logged in or not
+  searchResult: undefined | product[]; //this will contain the search result
+
+  //creating an instance of Router service and Product service
   constructor(private route: Router, private product: ProductService) {}
   ngOnInit(): void {
     //events method is an observable that emits events related to navigation changes
@@ -50,9 +47,9 @@ export class HeaderComponent {
       console.log(element.value);
       this.product.searchProduct(element.value).subscribe((result) => {
         console.warn(result);
-        if (result.length > 5) {
-          result.length = length;
-        }
+        // if (result.length > 5) {
+        //   result.length = length;
+        // }
         this.searchResult = result;
       });
     }

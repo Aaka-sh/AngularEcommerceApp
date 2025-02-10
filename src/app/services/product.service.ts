@@ -35,15 +35,19 @@ export class ProductService {
     );
   }
 
+  //for displaying the popular products in the carousel
   popularProducts() {
     return this.http.get<product[]>('http://localhost:3000/products?_limit=3');
   }
 
+  //for displaying the trendy products on the home page
   trendyProducts() {
     return this.http.get<product[]>('http://localhost:3000/products?_limit=8');
   }
 
+  //for searching and displaying the products
   searchProduct(query: string) {
+    //query will contain the keyword in search input field
     return this.http.get<product[]>(
       `http://localhost:3000/products?q=${query}`
     );
