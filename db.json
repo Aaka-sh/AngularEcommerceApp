@@ -36,8 +36,8 @@
       "name": "iPhone 13",
       "price": "69000",
       "category": "Mobile Phone",
-      "color": "Midnight Blue",
-      "description": "Apple Product",
+      "color": "Black",
+      "description": "15 cm (6.1-inch) Super Retina XDR display. Advanced dual-camera system with 12MP Wide and Ultra Wide cameras. Photographic Styles, Smart HDR 4, Night mode, 4K Dolby Vision HDR recording. 12MP TrueDepth front camera with Night mode, 4K Dolby Vision HDR recording\nA15 Bionic chip for lightning-fast performance",
       "image": "https://vasanthandco.in/images/productimages/1903__product__Mobiles__apple-mobile-iphone-13-blue-128gb-2.png",
       "id": "b4a2"
     },
@@ -90,7 +90,7 @@
       "name": "Apple Ipod Classic 7th Gen",
       "price": "27180",
       "category": "iPod",
-      "color": "Silver",
+      "color": "Grey",
       "description": "Apple Ipod Classic 7th Gen Purple Upgraded With SDXC Card, Custom Media Player 128GB",
       "image": "https://m.media-amazon.com/images/I/61rcCIWimOL.jpg",
       "id": "b588"
