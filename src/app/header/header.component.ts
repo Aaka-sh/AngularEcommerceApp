@@ -61,4 +61,8 @@ export class HeaderComponent {
     console.warn(val);
     this.route.navigate([`/search/${val}`]);
   }
+
+  redirectToDetails(id: string) {
+    this.route.navigate(['/details/' + id]);
+  }
 }
