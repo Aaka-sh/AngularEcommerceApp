@@ -4,11 +4,11 @@
   </div>
   <div *ngIf="menuType === 'default'" class="nav-search">
     <input
-      #searchInput
       type="text"
-      placeholder="Search"
+      #searchInput
       (keyup)="searchProduct($event)"
       (blur)="hideSearch()"
+      placeholder="Search"
     />
     <button (click)="submitSearch(searchInput.value)">
       <fa-icon [icon]="searchIcon"></fa-icon>

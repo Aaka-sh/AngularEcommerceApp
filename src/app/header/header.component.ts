@@ -48,7 +48,16 @@ export class HeaderComponent {
         // if (result.length > 5) {
         //   result.length = length;
         // }
-        this.searchResult = result;
+        //console.log(result[0]);
+        console.log('The entered value is ' + element.value);
+        //filter the results based on the search keyword as the api is returning all the products
+        let response: product[] = result.filter((item: product) =>
+          Object.values(item).some((value) =>
+            value.toString().toLowerCase().includes(element.value.toLowerCase())
+          )
+        );
+        console.log(response);
+        this.searchResult = response;
       });
     }
   }
@@ -59,7 +68,7 @@ export class HeaderComponent {
 
   submitSearch(val: string) {
     console.warn(val);
-    this.route.navigate([`/search/${val}`]);
+    this.route.navigate([`search/${val}`]);
   }
 
   redirectToDetails(id: string) {
