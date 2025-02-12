@@ -24,9 +24,16 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
     let query = this.activeRoute.snapshot.paramMap.get('query');
     //console.warn('from the query parameter: ',query);
+
     query &&
       this.product.searchProduct(query).subscribe((result) => {
-        this.searchResult = result;
+        //filter the results based on the search keyword as the api is returning all the products
+        let response: product[] = result.filter((item: product) =>
+          Object.values(item).some((value) =>
+            value.toString().toLowerCase().includes(query.toLowerCase())
+          )
+        );
+        this.searchResult = response;
       });
   }
 }
