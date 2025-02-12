@@ -35,5 +35,6 @@ export class SearchComponent implements OnInit {
         );
         this.searchResult = response;
       });
+    this.searchResult = undefined;
   }
 }

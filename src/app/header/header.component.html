@@ -19,10 +19,10 @@
       </li>
     </ul>
   </div>
-  <div [ngSwitch]="menuType">
+  <div [ngSwitch]="menuType" class="nav-menu">
     <ul *ngSwitchCase="'default'">
       <li><a routerLink="">HOME</a></li>
-      <li><a href="#">LOGIN</a></li>
+      <li><a routerLink="/user-auth">LOGIN/SIGN-UP</a></li>
       <li><a routerLink="/seller-auth">SELLER</a></li>
       <li><a href="#">CART</a></li>
     </ul>

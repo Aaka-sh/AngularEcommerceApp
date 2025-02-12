@@ -1,10 +1,10 @@
-.seller-auth {
+.user-auth {
   display: flex;
   height: calc(100vh - 50px);
   width: 100vw;
 }
 
-.seller-design,
+.user-design,
 .sign-up,
 .login {
   height: 100%;
@@ -18,7 +18,7 @@
   text-align: center;
 }
 
-.seller-design {
+.user-design {
   width: 40%;
   background-color: #e0e0e0;
 }

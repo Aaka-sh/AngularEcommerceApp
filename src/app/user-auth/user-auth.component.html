@@ -1,0 +1,47 @@
+<div class="user-auth">
+  <!-- left side design -->
+  <div class="user-design">
+    <h1>BECOME A MEMBER TODAY</h1>
+    <p>SIGN UP TO SEE EXCITING OFFERS</p>
+  </div>
+  <!-- right side design -->
+  <!-- sign up form -->
+  <div class="sign-up">
+    <h1>USER SIGN-UP</h1>
+    <form
+      class="common-form"
+      #userSignUp="ngForm"
+      (ngSubmit)="signUp(userSignUp.value)"
+    >
+      <div class="input-box">
+        <input
+          type="text"
+          class="form-input"
+          name="username"
+          placeholder="USERNAME"
+          ngModel
+        />
+      </div>
+      <div class="input-box">
+        <input
+          type="email"
+          class="form-input"
+          name="email"
+          placeholder="EMAIL"
+          ngModel
+        />
+      </div>
+      <div class="input-box">
+        <input
+          type="password"
+          class="form-input"
+          name="password"
+          placeholder="PASSWORD"
+          ngModel
+        />
+      </div>
+      <button class="form-button">SIGN UP</button>
+    </form>
+  </div>
+  <!-- end of user sign-up form -->
+</div>

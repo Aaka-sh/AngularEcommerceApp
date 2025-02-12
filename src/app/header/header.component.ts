@@ -63,10 +63,11 @@ export class HeaderComponent {
 
   submitSearch(val: string) {
     console.warn(val);
+    this.route.navigate(['/']);
     this.route.navigate([`search/${val}`]);
   }
 
   redirectToDetails(id: string) {
-    this.route.navigate(['/details/' + id]);
+    this.route.navigate(['details/' + id]);
   }
 }
