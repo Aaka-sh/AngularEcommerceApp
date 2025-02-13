@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { signUp } from '../data-type';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-user-auth',
@@ -9,10 +10,10 @@ import { signUp } from '../data-type';
   styleUrl: './user-auth.component.css',
 })
 export class UserAuthComponent implements OnInit {
-  constructor() {}
+  constructor(private user: UserService) {}
   ngOnInit(): void {}
 
   signUp(data: signUp) {
-    console.log(data);
+    this.user.userSignUp(data);
   }
 }

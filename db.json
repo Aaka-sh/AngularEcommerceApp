@@ -95,5 +95,19 @@
       "image": "https://m.media-amazon.com/images/I/61rcCIWimOL.jpg",
       "id": "b588"
     }
+  ],
+  "users": [
+    {
+      "id": "48ec",
+      "username": "akash",
+      "email": "akash@seller.com",
+      "password": "akash"
+    },
+    {
+      "id": "6397",
+      "username": "peter",
+      "email": "peter@user.com",
+      "password": "peter"
+    }
   ]
 }
