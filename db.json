@@ -108,6 +108,12 @@
       "username": "peter",
       "email": "peter@user.com",
       "password": "peter"
+    },
+    {
+      "id": "207f",
+      "username": "a",
+      "email": "a@seller.com",
+      "password": "a"
     }
   ]
 }

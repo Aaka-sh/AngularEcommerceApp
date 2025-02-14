@@ -13,6 +13,7 @@ import { product } from '../data-type';
 export class HeaderComponent {
   searchIcon = faSearch; //search icon
   sellerName: string = ''; //seller name
+  userName: string = ''; //user name
   menuType: string = 'default'; //creating a flag-type variable to track whether the seller is logged in or not
   searchResult: undefined | product[]; //this will contain the search result
 
@@ -28,6 +29,12 @@ export class HeaderComponent {
           let sellerData = sellerStore && JSON.parse(sellerStore)[0];
           this.sellerName = sellerData.name;
           this.menuType = 'seller';
+        } else if (localStorage.getItem('user')) {
+          let userStore = localStorage.getItem('user');
+          //this will check if the user store is empty before assigning value to sellerdata
+          let userData = userStore && JSON.parse(userStore);
+          this.userName = userData.username;
+          this.menuType = 'user';
         } else {
           this.menuType = 'default';
         }
@@ -41,6 +48,11 @@ export class HeaderComponent {
     this.route.navigate(['/']);
   }
 
+  //user logout function
+  userLogout() {
+    localStorage.removeItem('user');
+    this.route.navigate(['/user-auth']);
+  }
   searchProduct(query: KeyboardEvent) {
     if (query) {
       const element = query.target as HTMLInputElement;

@@ -11,7 +11,9 @@ import { UserService } from '../services/user.service';
 })
 export class UserAuthComponent implements OnInit {
   constructor(private user: UserService) {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.user.userAuthReload();
+  }
 
   signUp(data: signUp) {
     this.user.userSignUp(data);

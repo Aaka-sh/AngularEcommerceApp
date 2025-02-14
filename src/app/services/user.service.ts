@@ -22,4 +22,11 @@ export class UserService {
         }
       });
   }
+
+  //this function will restrict the user to go to the user-auth route when a user is logged in
+  userAuthReload() {
+    if (localStorage.getItem('user')) {
+      this.router.navigate(['/']);
+    }
+  }
 }
