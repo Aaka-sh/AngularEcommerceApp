@@ -44,4 +44,33 @@
     </form>
   </div>
   <!-- end of user sign-up form -->
+  <!-- login form -->
+  <div class="login">
+    <h1>LOG IN!</h1>
+    <p class="error-p"></p>
+    <form class="common-form" #sellerLogin="ngForm">
+      <div class="input-box">
+        <input
+          type="email"
+          class="form-input"
+          name="email"
+          placeholder="EMAIL"
+          ngModel
+        />
+      </div>
+      <div class="input-box">
+        <input
+          type="password"
+          class="form-input"
+          name="password"
+          placeholder="PASSWORD"
+          ngModel
+        />
+      </div>
+      <button class="form-button">LOG IN</button>
+      <div class="text">
+        <h3>New Member? <a>Register Now</a></h3>
+      </div>
+    </form>
+  </div>
 </div>
