@@ -10,7 +10,9 @@ import { Router } from '@angular/router';
   styleUrl: './seller-auth.component.css',
 })
 export class SellerAuthComponent implements OnInit {
+  //flag to show the login form or sign up form
   showLogin = false;
+  //in case of incorrect credentials
   authError: string = '';
   constructor(private seller: SellerService) {}
 

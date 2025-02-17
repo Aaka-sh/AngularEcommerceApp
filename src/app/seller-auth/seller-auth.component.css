@@ -4,9 +4,7 @@
   width: 100vw;
 }
 
-.seller-design,
-.sign-up,
-.login {
+.seller-design {
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
@@ -26,11 +24,13 @@
 .sign-up,
 .login {
   width: 60%;
-  background-color: #f4f4f4;
-  position: relative;
-  padding: 34px;
   border-radius: 6px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
 
 .sign-up form .input-box,

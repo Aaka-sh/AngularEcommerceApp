@@ -10,6 +10,9 @@ import { UserService } from '../services/user.service';
   styleUrl: './user-auth.component.css',
 })
 export class UserAuthComponent implements OnInit {
+  //in case of incorrect credentials
+  authError: string = '';
+  //flag to show the login form or sign up form
   showLogin: boolean = true;
   constructor(private user: UserService) {}
   ngOnInit(): void {
@@ -22,6 +25,12 @@ export class UserAuthComponent implements OnInit {
 
   login(data: login) {
     this.user.userLogin(data);
+    this.user.isLoginEmitter.subscribe((isError) => {
+      console.warn(isError);
+      if (isError) {
+        this.authError = 'Incorrect Credentials';
+      }
+    });
   }
 
   openSignup() {
