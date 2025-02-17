@@ -6,7 +6,7 @@
   </div>
   <!-- right side design -->
   <!-- sign up form -->
-  <div class="sign-up">
+  <div class="sign-up" *ngIf="!showLogin">
     <h1>USER SIGN-UP</h1>
     <form
       class="common-form"
@@ -41,14 +41,24 @@
         />
       </div>
       <button class="form-button">SIGN UP</button>
+      <div class="text">
+        <h3>
+          Already a Member?
+          <a (click)="openLogin()" class="redirect-button">Login Now</a>
+        </h3>
+      </div>
     </form>
   </div>
   <!-- end of user sign-up form -->
   <!-- login form -->
-  <div class="login">
+  <div class="login" *ngIf="showLogin">
     <h1>LOG IN!</h1>
     <p class="error-p"></p>
-    <form class="common-form" #sellerLogin="ngForm">
+    <form
+      class="common-form"
+      #userLogin="ngForm"
+      (ngSubmit)="login(userLogin.value)"
+    >
       <div class="input-box">
         <input
           type="email"
@@ -69,7 +79,7 @@
       </div>
       <button class="form-button">LOG IN</button>
       <div class="text">
-        <h3>New Member? <a>Register Now</a></h3>
+        <h3>New Member? <a (click)="openSignup()" class="">Register Now</a></h3>
       </div>
     </form>
   </div>
