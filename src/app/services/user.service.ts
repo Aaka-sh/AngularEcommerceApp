@@ -40,9 +40,9 @@ export class UserService {
       )
       .subscribe((result: any) => {
         if (result && result.body && result.body.length === 1) {
-          this.isLoginEmitter.emit(true);
           localStorage.setItem('user', JSON.stringify(result.body[0]));
           this.router.navigate(['/']);
+          this.isLoginEmitter.emit(false);
         } else {
           console.warn('Login failed');
           this.isLoginEmitter.emit(true);

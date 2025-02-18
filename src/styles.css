@@ -61,6 +61,13 @@ body {
   color: green;
 }
 
+.invalid-input {
+  color: red;
+  font-size: 12px;
+  margin-top: -15px;
+  text-align: left;
+}
+
 .carousel-caption {
   background-color: #0000007d;
   border-radius: 10px;

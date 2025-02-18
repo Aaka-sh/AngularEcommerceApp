@@ -58,7 +58,9 @@
       (ngSubmit)="login(userLogin.value)"
     >
       <h1>LOGIN</h1>
+      <!-- error message when login fails -->
       <p class="error-p">{{ authError }}</p>
+
       <div class="input-box">
         <input
           type="email"
@@ -66,8 +68,15 @@
           name="email"
           placeholder="EMAIL"
           ngModel
+          email
+          #email="ngModel"
+          required
         />
       </div>
+      <!-- error message when email field is empty -->
+      <p class="invalid-input" *ngIf="email.invalid && email.touched">
+        PLEASE ENTER A VALID EMAIL
+      </p>
       <div class="input-box">
         <input
           type="password"
@@ -75,9 +84,17 @@
           name="password"
           placeholder="PASSWORD"
           ngModel
+          minlength="2"
+          maxlength="20"
+          #password="ngModel"
+          required
         />
       </div>
-      <button class="form-button">LOG IN</button>
+      <!-- error message when password field is empty -->
+      <p class="invalid-input" *ngIf="password.invalid && password.touched">
+        PLEASE ENTER A VALID EMAIL
+      </p>
+      <button [disabled]="userLogin.invalid" class="form-button">LOG IN</button>
       <div class="text">
         <h3>New Member? <a (click)="openSignup()" class="">Register Now</a></h3>
       </div>
