@@ -52,4 +52,18 @@ export class ProductService {
       `http://localhost:3000/products?q=${query}`
     );
   }
+
+  //this function adds cart items in local storage if the user is not logged in
+  //first it checks if the local storage already contains the cart items
+  localAddToCart(data: product) {
+    let cartData = [];
+    let localCart = localStorage.getItem('localCart');
+    if (!localCart) {
+      localStorage.setItem('localCart', JSON.stringify([data]));
+    } else {
+      cartData = JSON.parse(localCart);
+      cartData.push(data);
+      localStorage.setItem('localCart', JSON.stringify(cartData));
+    }
+  }
 }
