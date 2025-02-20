@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { product } from '../data-type';
 import { HttpClient } from '@angular/common/http';
 
@@ -6,6 +6,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ProductService {
+  //cart items
+  cartData = new EventEmitter<product[] | []>();
+
   constructor(private http: HttpClient) {}
 
   //this function will add the product details in the database (fake api)
@@ -64,6 +67,17 @@ export class ProductService {
       cartData = JSON.parse(localCart);
       cartData.push(data);
       localStorage.setItem('localCart', JSON.stringify(cartData));
+      this.cartData.emit(cartData);
+    }
+  }
+
+  removeItemFromCart(productId: string) {
+    let cartData = localStorage.getItem('localCart');
+    if (cartData) {
+      let items: product[] = JSON.parse(cartData);
+      items = items.filter((item: product) => item.id !== productId);
+      localStorage.setItem('localCart', JSON.stringify(items));
+      this.cartData.emit(items);
     }
   }
 }

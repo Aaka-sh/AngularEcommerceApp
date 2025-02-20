@@ -22,8 +22,16 @@
         <input type="text" value="{{ productQuantity }}" />
         <button (click)="handleQuantity('add')">+</button>
       </div>
-
-      <button class="product-button" (click)="addToCart()">Add to Cart</button>
+      <button
+        *ngIf="removeCart"
+        class="product-button"
+        (click)="removeFromCart(productData.id)"
+      >
+        Remove Item
+      </button>
+      <button *ngIf="!removeCart" class="product-button" (click)="addToCart()">
+        Add to Cart
+      </button>
       <button class="product-button">Buy Now</button>
     </div>
   </div>

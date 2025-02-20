@@ -16,9 +16,11 @@ export class HeaderComponent {
   userName: string = ''; //user name
   menuType: string = 'default'; //creating a flag-type variable to track whether the seller is logged in or not
   searchResult: undefined | product[]; //this will contain the search result
+  cartItems = 0; //number of items in the cart
 
   //creating an instance of Router service and Product service
   constructor(private route: Router, private product: ProductService) {}
+
   ngOnInit(): void {
     //events method is an observable that emits events related to navigation changes
     this.route.events.subscribe((val: any) => {
@@ -39,6 +41,14 @@ export class HeaderComponent {
           this.menuType = 'default';
         }
       }
+    });
+
+    let cartData = localStorage.getItem('localCart');
+    if (cartData) {
+      this.cartItems = JSON.parse(cartData).length;
+    }
+    this.product.cartData.subscribe((items) => {
+      this.cartItems = items.length;
     });
   }
 
