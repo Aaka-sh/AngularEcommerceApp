@@ -115,5 +115,31 @@
       "email": "a@seller.com",
       "password": "a"
     }
+  ],
+  "cart": [
+    {
+      "id": "a2ec",
+      "name": "iPhone 13",
+      "price": "69000",
+      "category": "Mobile Phone",
+      "color": "Black",
+      "description": "Super Retina XDR display, Advanced dual-camera system with 12MP Wide and Ultra Wide cameras, Night mode, 4K Dolby Vision HDR recording. 12MP TrueDepth front camera with Night mode",
+      "image": "https://vasanthandco.in/images/productimages/1903__product__Mobiles__apple-mobile-iphone-13-blue-128gb-2.png",
+      "quantity": 1,
+      "productId": "b4a2",
+      "userId": "48ec"
+    },
+    {
+      "id": "a1d2",
+      "name": "iPhone 13",
+      "price": "69000",
+      "category": "Mobile Phone",
+      "color": "Black",
+      "description": "Super Retina XDR display, Advanced dual-camera system with 12MP Wide and Ultra Wide cameras, Night mode, 4K Dolby Vision HDR recording. 12MP TrueDepth front camera with Night mode",
+      "image": "https://vasanthandco.in/images/productimages/1903__product__Mobiles__apple-mobile-iphone-13-blue-128gb-2.png",
+      "quantity": 2,
+      "productId": "b4a2",
+      "userId": "48ec"
+    }
   ]
 }
