@@ -52,6 +52,7 @@ export class ProductDetailsComponent implements OnInit {
                 productId?.toString() === item.productId?.toString()
             );
             if (item.length) {
+              this.cartData = item[0];
               this.removeCart = true;
             }
           });
@@ -97,7 +98,6 @@ export class ProductDetailsComponent implements OnInit {
   removeFromCart(productId: string) {
     if (!localStorage.getItem('user')) {
       this.product.removeItemFromCart(productId);
-      this.removeCart = false;
     } else {
       console.log('Cart Data: ', this.cartData);
       this.cartData &&
@@ -107,5 +107,7 @@ export class ProductDetailsComponent implements OnInit {
           this.product.getCartList(userId);
         });
     }
+    //change the button to 'Add to Cart'
+    this.removeCart = false;
   }
 }

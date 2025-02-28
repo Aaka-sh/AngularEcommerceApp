@@ -142,18 +142,6 @@
       "userId": "48ec"
     },
     {
-      "id": "ae50",
-      "name": "Macbook Pro",
-      "price": "310990",
-      "category": "Laptops",
-      "color": "Black",
-      "description": "Apple Macbook Pro with M4 Max",
-      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp14-spaceblack-select-202410?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1728916305295",
-      "quantity": 1,
-      "productId": "e341",
-      "userId": "48ec"
-    },
-    {
       "id": "72f6",
       "name": "Apple Watch Series 10",
       "price": "59900",
@@ -163,30 +151,6 @@
       "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXM23ref_FV99_VW_34FR+watch-case-46-aluminum-jetblack-cell-s10_VW_34FR+watch-face-46-aluminum-jetblack-s10_VW_34FR?wid=752&hei=720&bgc=fafafa&trim=1&fmt=p-jpg&qlt=80&.v=TnVrdDZWRlZzTURKbHFqOGh0dGpVRW5TeWJ6QW43NUFnQ2V4cmRFc1VnYUdWejZ5THhpKzJwRmRDYlhxN2o5aWp3UWRQeU9ENTVkdnpWZ2VCQ1JYVkF1Z0RaeFB5LzRxZEliRVE2WkswOW5YNUh6UG9VcVpLK2VQampYMHFQR0ZraFRqYm9IdFcyZHNBc3g5MFNqQkIxRVpGM0VTYkFEYWkrVUpmdm5HMEsvZzdYL1dmbHI1ck0vS0dDZmJkTUNtcXlYK1hMV0U1ZW9xcCtlRHF3V3gyZThGL0dtL1JkeEJQSnRCMXJsZFBFY2doN2ZiODFwWklZeDgrZ0RtbVRXag",
       "quantity": 1,
       "productId": "5de9",
-      "userId": "48ec"
-    },
-    {
-      "id": "0187",
-      "name": "iPhone 13",
-      "price": "69000",
-      "category": "Mobile Phone",
-      "color": "Black",
-      "description": "Super Retina XDR display, Advanced dual-camera system with 12MP Wide and Ultra Wide cameras, Night mode, 4K Dolby Vision HDR recording. 12MP TrueDepth front camera with Night mode",
-      "image": "https://vasanthandco.in/images/productimages/1903__product__Mobiles__apple-mobile-iphone-13-blue-128gb-2.png",
-      "quantity": 1,
-      "productId": "b4a2",
-      "userId": "48ec"
-    },
-    {
-      "id": "f8fa",
-      "name": "iPad Air - 5th Gen",
-      "price": "55600",
-      "category": "Tablets",
-      "color": "Pink",
-      "description": "Apple iPad Air 5th Generation Wi-Fi (10.9 Inch, 64GB, Pink, 2022 model)",
-      "image": "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1685968471/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/264353_nx2kb9.png?tr=w-600",
-      "quantity": 1,
-      "productId": "cc66",
       "userId": "48ec"
     }
   ]
