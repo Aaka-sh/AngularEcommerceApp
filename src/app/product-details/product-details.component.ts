@@ -14,6 +14,7 @@ export class ProductDetailsComponent implements OnInit {
   productData: undefined | product; //this will store all the info about the product with an id
   productQuantity: number = 1; //initial value for product quantity
   removeCart = false; //
+  cartData: product | undefined;
   constructor(
     private activeRoute: ActivatedRoute,
     private product: ProductService
@@ -33,10 +34,27 @@ export class ProductDetailsComponent implements OnInit {
           );
           //console.warn('Items: ', items);
           if (items.length) {
+            this.cartData = items[0];
             this.removeCart = true;
           } else {
             this.removeCart = false;
           }
+        }
+
+        //if the user reloads the page, the cart shows count from local cart
+        let user = localStorage.getItem('user');
+        if (user) {
+          let userId = user && JSON.parse(user).id;
+          this.product.getCartList(userId);
+          this.product.cartData.subscribe((result) => {
+            let item = result.filter(
+              (item: product) =>
+                productId?.toString() === item.productId?.toString()
+            );
+            if (item.length) {
+              this.removeCart = true;
+            }
+          });
         }
       });
   }
@@ -68,7 +86,8 @@ export class ProductDetailsComponent implements OnInit {
         delete cartData.id;
         this.product.addToCart(cartData).subscribe((result) => {
           if (result) {
-            alert('Product is added to the cart');
+            this.product.getCartList(userId);
+            this.removeCart = true;
           }
         });
       }
@@ -76,7 +95,17 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   removeFromCart(productId: string) {
-    this.product.removeItemFromCart(productId);
-    this.removeCart = false;
+    if (!localStorage.getItem('user')) {
+      this.product.removeItemFromCart(productId);
+      this.removeCart = false;
+    } else {
+      console.log('Cart Data: ', this.cartData);
+      this.cartData &&
+        this.product.removeFromCart(this.cartData.id).subscribe((result) => {
+          let user = localStorage.getItem('user');
+          let userId = user && JSON.parse(user).id;
+          this.product.getCartList(userId);
+        });
+    }
   }
 }

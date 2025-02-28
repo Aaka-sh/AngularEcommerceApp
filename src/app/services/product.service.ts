@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ProductService {
-  //cart items
+  //whenever there is any change in the cart items, other parts of app will be notified
   cartData = new EventEmitter<product[] | []>();
 
   constructor(private http: HttpClient) {}
@@ -26,10 +26,12 @@ export class ProductService {
     return this.http.delete(`http://localhost:3000/products/${id}`);
   }
 
+  //this function will get the product details for a specific product
   getProduct(id: string) {
     return this.http.get<product>(`http://localhost:3000/products/${id}`);
   }
 
+  //this function will update the product details for a specific product
   updateProduct(product: product) {
     //for updation of information, we use put
     return this.http.put<product>(
@@ -63,6 +65,7 @@ export class ProductService {
     let localCart = localStorage.getItem('localCart');
     if (!localCart) {
       localStorage.setItem('localCart', JSON.stringify([data]));
+      this.cartData.emit([data]);
     } else {
       cartData = JSON.parse(localCart);
       cartData.push(data);
@@ -83,5 +86,23 @@ export class ProductService {
 
   addToCart(cartData: cart) {
     return this.http.post('http://localhost:3000/cart', cartData);
+  }
+
+  //this function will retrieve products in the cart for a specific user from DB
+  getCartList(userId: number) {
+    return this.http
+      .get<product[]>('http://localhost:3000/cart?userId=' + userId, {
+        observe: 'response',
+      })
+      .subscribe((result) => {
+        if (result && result.body) {
+          this.cartData.emit(result.body);
+        }
+      });
+  }
+
+  //function to remove items from cart
+  removeFromCart(cartId: string) {
+    return this.http.delete('http://localhost:3000/cart/' + cartId);
   }
 }

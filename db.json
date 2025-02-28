@@ -164,6 +164,30 @@
       "quantity": 1,
       "productId": "5de9",
       "userId": "48ec"
+    },
+    {
+      "id": "0187",
+      "name": "iPhone 13",
+      "price": "69000",
+      "category": "Mobile Phone",
+      "color": "Black",
+      "description": "Super Retina XDR display, Advanced dual-camera system with 12MP Wide and Ultra Wide cameras, Night mode, 4K Dolby Vision HDR recording. 12MP TrueDepth front camera with Night mode",
+      "image": "https://vasanthandco.in/images/productimages/1903__product__Mobiles__apple-mobile-iphone-13-blue-128gb-2.png",
+      "quantity": 1,
+      "productId": "b4a2",
+      "userId": "48ec"
+    },
+    {
+      "id": "f8fa",
+      "name": "iPad Air - 5th Gen",
+      "price": "55600",
+      "category": "Tablets",
+      "color": "Pink",
+      "description": "Apple iPad Air 5th Generation Wi-Fi (10.9 Inch, 64GB, Pink, 2022 model)",
+      "image": "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1685968471/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/264353_nx2kb9.png?tr=w-600",
+      "quantity": 1,
+      "productId": "cc66",
+      "userId": "48ec"
     }
   ]
 }

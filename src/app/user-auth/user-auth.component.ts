@@ -53,10 +53,10 @@ export class UserAuthComponent implements OnInit {
   localCartToRemoteCart() {
     //getting the local cart contents
     let data = localStorage.getItem('localCart');
+    let user = localStorage.getItem('user');
+    let userId = user && JSON.parse(user).id;
     if (data) {
       let cartListData: product[] = JSON.parse(data);
-      let user = localStorage.getItem('user');
-      let userId = user && JSON.parse(user).id;
       cartListData.forEach((product: product, index) => {
         let cartData: cart = {
           ...product,
@@ -76,5 +76,9 @@ export class UserAuthComponent implements OnInit {
         }
       });
     }
+    //because the JSON server can not handle multiple requests at the same time, we will use set time out function
+    setTimeout(() => {
+      this.product.getCartList(userId);
+    }, 2000);
   }
 }
