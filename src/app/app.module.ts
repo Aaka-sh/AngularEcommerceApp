@@ -21,6 +21,7 @@ import { SearchComponent } from './search/search.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { FooterComponent } from './footer/footer.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { FooterComponent } from './footer/footer.component';
     ProductDetailsComponent,
     UserAuthComponent,
     FooterComponent,
+    CartPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, FontAwesomeModule, NgbModule],
   providers: [
