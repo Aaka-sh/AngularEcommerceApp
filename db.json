@@ -153,5 +153,15 @@
       "productId": "5de9",
       "userId": "48ec"
     }
+  ],
+  "orders": [
+    {
+      "id": "f714",
+      "email": "akash@seller.com",
+      "address": "Shivajinagar Pune",
+      "contact": "9182192819",
+      "totalPrice": 139000,
+      "userId": "48ec"
+    }
   ]
 }

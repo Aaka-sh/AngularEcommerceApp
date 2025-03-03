@@ -2,18 +2,23 @@
   <h1>CHECKOUT</h1>
   <div class="row">
     <div class="col-sm-5">
-      <h3>Total: 5000</h3>
+      <h3>Total: {{ totalPrice }}</h3>
       <h4>Payment Method: <b>Pay On Delivery</b></h4>
     </div>
     <div class="col-sm-7 sign-up">
       <h3>Add Shipping Address</h3>
-      <form #orderData="ngForm" class="common-form">
+      <form
+        #orderData="ngForm"
+        class="common-form"
+        (ngSubmit)="orderNow(orderData.value)"
+      >
         <div class="input-box">
           <input
             type="text"
             class="form-input"
             name="email"
             placeholder="EMAIL"
+            ngModel
           />
         </div>
         <div class="input-box">
@@ -22,6 +27,7 @@
             class="form-input"
             name="address"
             placeholder="ADDRESS"
+            ngModel
           />
         </div>
         <div class="input-box">
@@ -30,6 +36,7 @@
             class="form-input"
             name="contact"
             placeholder="CONTACT"
+            ngModel
           />
         </div>
         <button class="form-button">ORDER NOW</button>
