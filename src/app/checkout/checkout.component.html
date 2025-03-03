@@ -1,0 +1,39 @@
+<div class="checkout">
+  <h1>CHECKOUT</h1>
+  <div class="row">
+    <div class="col-sm-5">
+      <h3>Total: 5000</h3>
+      <h4>Payment Method: <b>Pay On Delivery</b></h4>
+    </div>
+    <div class="col-sm-7 sign-up">
+      <h3>Add Shipping Address</h3>
+      <form #orderData="ngForm" class="common-form">
+        <div class="input-box">
+          <input
+            type="text"
+            class="form-input"
+            name="email"
+            placeholder="EMAIL"
+          />
+        </div>
+        <div class="input-box">
+          <input
+            type="text"
+            class="form-input"
+            name="address"
+            placeholder="ADDRESS"
+          />
+        </div>
+        <div class="input-box">
+          <input
+            type="text"
+            class="form-input"
+            name="contact"
+            placeholder="CONTACT"
+          />
+        </div>
+        <button class="form-button">ORDER NOW</button>
+      </form>
+    </div>
+  </div>
+</div>

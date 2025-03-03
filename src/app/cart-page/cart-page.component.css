@@ -50,3 +50,13 @@
   border: none;
   margin: 20px 20px 20px 0px;
 }
+
+.checkout-btn {
+  border-radius: 50px;
+  background-color: black;
+  padding: 5px 20px 5px 20px;
+  color: white;
+  border: none;
+  margin: 20px 20px 20px 0px;
+  width: 100%;
+}
