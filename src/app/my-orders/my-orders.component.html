@@ -1,6 +1,6 @@
 <div class="my-orders">
   <h1>My Orders</h1>
-  <!-- heading -->
+  <!-- header -->
   <div class="row">
     <div class="col-sm-2">
       <span>Order</span>
@@ -15,11 +15,11 @@
       <span>Status</span>
     </div>
     <div class="col-sm-2">
-      <span>Action</span>
+      <span>Delete Order</span>
     </div>
   </div>
   <!-- orders go here -->
-  <div class="row order-data">
+  <div class="row order-data" *ngFor="let order of orderListData">
     <div class="col-sm-2">
       <img
         src="https://www.clipartmax.com/png/middle/210-2106541_track-my-order-beach-volleyball.png"
@@ -28,10 +28,10 @@
       />
     </div>
     <div class="col-sm-2">
-      <span>#100</span>
+      <span>{{ order.id }}</span>
     </div>
     <div class="col-sm-2">
-      <span>120000</span>
+      <span>{{ order.totalPrice }}</span>
     </div>
     <div class="col-sm-2">
       <span>In Progress</span>
