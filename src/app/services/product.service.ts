@@ -134,4 +134,8 @@ export class ProductService {
         this.cartData.emit([]);
       });
   }
+
+  cancelOrder(orderId: string) {
+    return this.http.delete('http://localhost:3000/orders/' + orderId);
+  }
 }

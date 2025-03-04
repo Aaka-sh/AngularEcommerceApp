@@ -125,30 +125,6 @@
       "contact": "9182192819",
       "totalPrice": 139000,
       "userId": "48ec"
-    },
-    {
-      "id": "8640",
-      "email": "akash@seller.com",
-      "address": "Shivajinagar Pune",
-      "contact": "9602716766",
-      "totalPrice": 139000,
-      "userId": "48ec"
-    },
-    {
-      "id": "2661",
-      "email": "akash@seller.com",
-      "address": "Shivajinagar Pune",
-      "contact": "9182192819",
-      "totalPrice": 139000,
-      "userId": "48ec"
-    },
-    {
-      "id": "fe67",
-      "email": "",
-      "address": "",
-      "contact": "",
-      "totalPrice": 139000,
-      "userId": "48ec"
     }
   ]
 }
