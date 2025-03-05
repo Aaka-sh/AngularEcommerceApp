@@ -2,7 +2,7 @@
   <div class="navbar-logo">
     <a routerLink="/">TECHSY</a>
   </div>
-  <div *ngIf="menuType === 'default'" class="nav-search">
+  <div *ngIf="menuType !== 'seller'" class="nav-search">
     <input
       type="text"
       #searchInput
@@ -20,6 +20,7 @@
     </ul>
   </div>
   <div [ngSwitch]="menuType" class="nav-menu">
+    <!-- default menu start -->
     <ul *ngSwitchCase="'default'">
       <li><a routerLink="">HOME</a></li>
       <li><a routerLink="/user-auth">LOGIN/SIGN-UP</a></li>
@@ -28,20 +29,27 @@
         <a href="#">CART({{ cartItems }})</a>
       </li>
     </ul>
+    <!-- default menu end -->
+    <!-- user menu start -->
     <ul *ngSwitchCase="'user'">
       <li><a routerLink="seller-auth">Seller</a></li>
       <li><a routerLink="">HOME</a></li>
       <li>
         <a href="#">HI {{ userName | uppercase }}!</a>
       </li>
+      <!-- if the cart is empty, then it wont navigate to cart page -->
       <li>
-        <a routerLink="cart-page">CART({{ cartItems }})</a>
+        <a [routerLink]="cartItems > 0 ? 'cart-page' : null"
+          >CART({{ cartItems }})</a
+        >
       </li>
       <li>
         <a routerLink="my-orders">MY ORDERS</a>
       </li>
       <li><a (click)="userLogout()">LOGOUT</a></li>
     </ul>
+    <!-- user menu end -->
+    <!-- seller menu start -->
     <ul *ngSwitchCase="'seller'">
       <li><a routerLink="seller-add-product">ADD RPODUCT</a></li>
       <li><a routerLink="seller-home">LIST</a></li>
@@ -50,5 +58,6 @@
         <a href="#">HI {{ sellerName | uppercase }}!</a>
       </li>
     </ul>
+    <!-- seller menu end -->
   </div>
 </nav>

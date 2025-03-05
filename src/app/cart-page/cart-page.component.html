@@ -15,7 +15,11 @@
         <li>
           <span>Quantity: {{ cart.quantity }}</span>
         </li>
-        <li><button class="remove-button">Remove</button></li>
+        <li>
+          <button class="remove-button" (click)="removeFromCart(cart.id)">
+            Remove
+          </button>
+        </li>
       </ul>
     </div>
 
