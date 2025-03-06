@@ -1,5 +1,24 @@
 <div class="product-list">
-  <h1>PRODUCT LIST</h1>
+  <h1 class="heading-text">PRODUCT LIST</h1>
+  <div class="custom-container">
+    <div class="custom-card" *ngFor="let item of productList">
+      <div class="prod-image"><img src="{{ item.image }}" alt="" /></div>
+      <div class="prod-name-price">
+        <p>Name: {{ item.name }}</p>
+        <p>Price: {{ item.price }}</p>
+      </div>
+      <div class="prod-color-cat">
+        <p>Color: {{ item.color }}</p>
+        <p>Category: {{ item.category }}</p>
+      </div>
+      <div class="prod-description">
+        <p>Description: {{ item.description }}</p>
+      </div>
+      <div class="action">
+        <button>Action</button>
+      </div>
+    </div>
+  </div>
   <p class="message-p">{{ productMessage }}</p>
   <table>
     <thead>

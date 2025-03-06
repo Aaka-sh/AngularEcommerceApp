@@ -32,7 +32,7 @@
 }
 .typing-text {
   font-size: 24px;
-  border-right: 2px solid black; /* Cursor effect */
+  border-right: 2px solid black;
   white-space: nowrap;
   overflow: hidden;
   width: 0;
@@ -44,7 +44,7 @@
     width: 0;
   }
   to {
-    width: 20ch; /* Adjust this based on text length */
+    width: 12ch;
   }
 }
 

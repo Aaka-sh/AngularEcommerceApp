@@ -3,7 +3,9 @@
     <h1>No Gimmicks.</h1>
     <h1 class="typing-text">Just Pure Tech.</h1>
   </div>
-  <button class="product-btn">SHOP NOW</button>
+  <button onclick="location.href='#products'" class="product-btn">
+    SHOP NOW
+  </button>
 </div>
 <div class="home-slider">
   @if (popularProducts) {
@@ -26,7 +28,7 @@
   }
 </div>
 <!-- Product -->
-<div class="product-list-wrapper">
+<div id="products" class="product-list-wrapper">
   <h1 class="text-center mb-5">TRENDY PRODUCTS</h1>
   <div class="products-container">
     <div class="col-sm-25" *ngFor="let item of trendyProducts">
