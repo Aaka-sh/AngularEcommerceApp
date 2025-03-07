@@ -1,6 +1,6 @@
 .product-details {
   width: 100vw;
-  height: 80vh;
+  height: 93vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,9 +22,9 @@
 }
 
 .product-button {
-  border-radius: 50px;
+  border-radius: 10px;
   background-color: black;
-  padding: 5px 20px 5px 20px;
+  padding: 6px 30px 6px 30px;
   color: white;
   border: none;
   margin: 20px 20px 20px 0px;
@@ -52,4 +52,12 @@
   color: white;
   border: none;
   text-align: center;
+}
+
+.quantity-group .plus-button {
+  border-radius: 0px 10px 10px 0px;
+}
+
+.quantity-group .minus-button {
+  border-radius: 10px 0px 0px 10px;
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { product } from '../data-type';
 import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seller-home',
@@ -19,7 +20,7 @@ export class SellerHomeComponent implements OnInit {
   icon = faTrash;
   updateIcon = faEdit;
   //instance of product service
-  constructor(private product: ProductService) {}
+  constructor(private product: ProductService, private router: Router) {}
 
   ngOnInit(): void {
     //call api when the page is first loaded
@@ -50,4 +51,9 @@ export class SellerHomeComponent implements OnInit {
       }
     });
   }
+
+  // //function to redirect to a page
+  // redirect(itemId: string) {
+  //   this.router.navigate([`/seller-update-product/${itemId}`]);
+  // }
 }

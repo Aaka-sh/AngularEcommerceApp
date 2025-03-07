@@ -30,8 +30,12 @@
   height: 30vh;
   width: 40vw;
 }
+.top-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 .typing-text {
   font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   border-right: 2px solid black;
   white-space: nowrap;
   overflow: hidden;

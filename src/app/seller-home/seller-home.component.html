@@ -1,5 +1,6 @@
 <div class="product-list">
   <h1 class="heading-text">PRODUCT LIST</h1>
+  <!-- updated cards start -->
   <div class="custom-container">
     <div class="custom-card" *ngFor="let item of productList">
       <div class="prod-image"><img src="{{ item.image }}" alt="" /></div>
@@ -14,11 +15,22 @@
       <div class="prod-description">
         <p>Description: {{ item.description }}</p>
       </div>
-      <div class="action">
-        <button>Action</button>
+      <div class="prod-action">
+        <button title="Delete Product">
+          <fa-icon [icon]="icon" (click)="deleteProduct(item.id)"></fa-icon>
+        </button>
+        <a
+          class="adjust-update-link"
+          routerLink="/seller-update-product/{{ item.id }}"
+        >
+          <button title="Update Product">
+            <fa-icon [icon]="updateIcon"></fa-icon>
+          </button>
+        </a>
       </div>
     </div>
   </div>
+  <!-- updated cards end -->
   <p class="message-p">{{ productMessage }}</p>
   <table>
     <thead>

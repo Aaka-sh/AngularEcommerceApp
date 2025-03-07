@@ -5,22 +5,23 @@
   <div class="col-sm-7">
     <div class="details">
       <h1>{{ productData.name }}</h1>
-      <h3>Price: {{ productData.price }}</h3>
+      <h6><b>Price:</b> {{ productData.price }}</h6>
       <div>
+        <span><b>Color: </b></span>
         <h3
           [style.backgroundColor]="productData.color"
           class="product-color"
         ></h3>
       </div>
 
-      <h6>Category: {{ productData.category }}</h6>
-      <h6>Description:</h6>
+      <h6><b>Category:</b> {{ productData.category }}</h6>
+      <h6><b>Description:</b></h6>
       <p>{{ productData.description }}</p>
-      <p>Quantity:</p>
+      <p><b>Quantity:</b></p>
       <div class="quantity-group">
-        <button (click)="handleQuantity('min')">-</button>
+        <button class="minus-button" (click)="handleQuantity('min')">-</button>
         <input type="text" value="{{ productQuantity }}" />
-        <button (click)="handleQuantity('add')">+</button>
+        <button class="plus-button" (click)="handleQuantity('add')">+</button>
       </div>
       <button
         *ngIf="removeCart"

@@ -23,7 +23,45 @@
   margin: 10px 50px 10px 50px;
   background-color: rgb(237, 237, 237);
   border-radius: 30px;
-  padding: 1% 5% 1% 5%;
+  padding: 1% 1% 1% 1%;
+}
+
+.product-list .custom-container .custom-card .prod-image,
+.product-list .custom-container .custom-card .prod-name-price,
+.product-list .custom-container .custom-card .prod-color-cat,
+.product-list .custom-container .custom-card .prod-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-list .custom-container .custom-card .prod-image {
+  /* background-color: violet; */
+  width: 15%;
+}
+
+.product-list .custom-container .custom-card .prod-name-price {
+  /* background-color: blue; */
+  width: 15%;
+}
+
+.product-list .custom-container .custom-card .prod-color-cat {
+  /* background-color: green; */
+  width: 15%;
+}
+
+.product-list .custom-container .custom-card .prod-description {
+  /* background-color: orange; */
+  width: 45%;
+}
+
+.product-list .custom-container .custom-card .prod-action {
+  /* background-color: red; */
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* card component styling end */
 
@@ -49,4 +87,12 @@ img {
 
 .adjust-update-link {
   margin-left: 10px;
+}
+
+button {
+  background-color: black;
+  padding: 5px 5px 5px 5px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 45%;
 }
