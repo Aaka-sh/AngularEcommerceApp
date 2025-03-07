@@ -4,29 +4,26 @@
   <div class="custom-container">
     <div class="custom-card" *ngFor="let item of productList">
       <div class="prod-image"><img src="{{ item.image }}" alt="" /></div>
-      <div class="prod-name-price">
+      <div class="prod-details">
         <p>Name: {{ item.name }}</p>
-        <p>Price: {{ item.price }}</p>
-      </div>
-      <div class="prod-color-cat">
         <p>Color: {{ item.color }}</p>
         <p>Category: {{ item.category }}</p>
-      </div>
-      <div class="prod-description">
         <p>Description: {{ item.description }}</p>
       </div>
+
       <div class="prod-action">
-        <button title="Delete Product">
-          <fa-icon [icon]="icon" (click)="deleteProduct(item.id)"></fa-icon>
+        <p>Price: {{ item.price }}</p>
+
+        <button title="Delete Product" (click)="deleteProduct(item.id)">
+          DELETE PRODUCT
         </button>
-        <a
-          class="adjust-update-link"
+
+        <button
+          title="Update Product"
           routerLink="/seller-update-product/{{ item.id }}"
         >
-          <button title="Update Product">
-            <fa-icon [icon]="updateIcon"></fa-icon>
-          </button>
-        </a>
+          UPDATE PRODUCT
+        </button>
       </div>
     </div>
   </div>

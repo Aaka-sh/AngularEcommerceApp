@@ -27,9 +27,7 @@
 }
 
 .product-list .custom-container .custom-card .prod-image,
-.product-list .custom-container .custom-card .prod-name-price,
-.product-list .custom-container .custom-card .prod-color-cat,
-.product-list .custom-container .custom-card .prod-description {
+.product-list .custom-container .custom-card .detail {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,28 +39,27 @@
   width: 15%;
 }
 
-.product-list .custom-container .custom-card .prod-name-price {
+.product-list .custom-container .custom-card .prod-details {
   /* background-color: blue; */
-  width: 15%;
-}
-
-.product-list .custom-container .custom-card .prod-color-cat {
-  /* background-color: green; */
-  width: 15%;
-}
-
-.product-list .custom-container .custom-card .prod-description {
-  /* background-color: orange; */
-  width: 45%;
+  width: 70%;
 }
 
 .product-list .custom-container .custom-card .prod-action {
   /* background-color: red; */
-  width: 10%;
+  width: 15%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+/* .product-list .custom-container .custom-card .prod-action .buttons-division {
+  display: flex;
+  background-color: red;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+} */
 /* card component styling end */
 
 table {
@@ -94,5 +91,5 @@ button {
   padding: 5px 5px 5px 5px;
   color: white;
   border: 1px solid white;
-  border-radius: 45%;
+  border-radius: 5px;
 }
