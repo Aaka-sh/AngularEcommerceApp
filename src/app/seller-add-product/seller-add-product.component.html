@@ -6,48 +6,76 @@
     class="common-form"
     (ngSubmit)="submit(addProduct.value)"
   >
-    <input
-      type="text"
-      class="form-input"
-      placeholder="ENTER PRODUCT NAME"
-      name="name"
-      ngModel
-    />
-    <input
-      type="text"
-      class="form-input"
-      placeholder="ENTER PRODUCT PRICE"
-      name="price"
-      ngModel
-    />
-    <input
-      type="text"
-      class="form-input"
-      placeholder="ENTER PRODUCT CATEGORY"
-      name="category"
-      ngModel
-    />
-    <input
-      type="text"
-      class="form-input"
-      placeholder="ENTER PRODUCT COLOR"
-      name="color"
-      ngModel
-    />
-    <textarea
-      type="text"
-      class="form-input"
-      placeholder="ENTER PRODUCT DESCRIPTION"
-      name="description"
-      ngModel
-    ></textarea>
-    <input
-      type="text"
-      class="form-input"
-      placeholder="ENTER PRODUCT IMAGE URL"
-      name="image"
-      ngModel
-    />
-    <button class="form-button">ADD PRODUCT</button>
+    <div class="form-section">
+      <div class="cell">
+        <span>NAME</span>
+        <input
+          type="text"
+          class="form-input"
+          placeholder="ENTER PRODUCT NAME"
+          name="name"
+          ngModel
+        />
+      </div>
+      <div class="cell">
+        <span>PRICE</span>
+        <input
+          type="text"
+          class="form-input"
+          placeholder="ENTER PRODUCT PRICE"
+          name="price"
+          ngModel
+        />
+      </div>
+    </div>
+
+    <div class="form-section">
+      <div class="cell">
+        <span>CATEGORY</span>
+        <input
+          type="text"
+          class="form-input"
+          placeholder="ENTER PRODUCT CATEGORY"
+          name="category"
+          ngModel
+        />
+      </div>
+      <div class="cell">
+        <span>COLOR</span>
+        <input
+          type="text"
+          class="form-input"
+          placeholder="ENTER PRODUCT COLOR"
+          name="color"
+          ngModel
+        />
+      </div>
+    </div>
+    <div class="form-section">
+      <div class="cell">
+        <span>DESCRIPTION</span>
+        <textarea
+          rows="10"
+          type="text"
+          class="form-input"
+          placeholder="ENTER PRODUCT DESCRIPTION"
+          name="description"
+          ngModel
+        ></textarea>
+      </div>
+    </div>
+    <div class="form-section">
+      <div class="cell">
+        <span>IMAGE URL</span>
+        <input
+          type="text"
+          class="form-input"
+          placeholder="ENTER PRODUCT IMAGE URL"
+          name="image"
+          ngModel
+        />
+      </div>
+    </div>
+    <button class="add-button">ADD PRODUCT</button>
   </form>
 </div>
