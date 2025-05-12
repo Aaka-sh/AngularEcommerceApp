@@ -24,6 +24,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { ProductsPageComponent } from './products-page/products-page.component';
 
 @NgModule({
   declarations: [
@@ -41,8 +42,15 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     CartPageComponent,
     CheckoutComponent,
     MyOrdersComponent,
+    ProductsPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, FontAwesomeModule, NgbModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    FontAwesomeModule,
+    NgbModule,
+  ],
   providers: [
     provideClientHydration(withEventReplay()),
     provideHttpClient(withFetch()),

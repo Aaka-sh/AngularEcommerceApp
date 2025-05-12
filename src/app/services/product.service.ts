@@ -47,7 +47,7 @@ export class ProductService {
 
   //for displaying the trendy products on the home page
   trendyProducts() {
-    return this.http.get<product[]>('http://localhost:3000/products?_limit=8');
+    return this.http.get<product[]>('http://localhost:3000/products?_limit=4');
   }
 
   //for searching and displaying the products

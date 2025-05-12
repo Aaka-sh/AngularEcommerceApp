@@ -114,9 +114,70 @@
       "username": "a",
       "email": "a@seller.com",
       "password": "a"
+    },
+    {
+      "id": "f184",
+      "username": "dev",
+      "email": "dev@user.com",
+      "password": "dev"
+    },
+    {
+      "id": "5d14",
+      "username": "oran",
+      "email": "oran@user.com",
+      "password": "oran"
+    },
+    {
+      "id": "0576",
+      "username": "preru",
+      "email": "preru@user.com",
+      "password": "preru"
+    },
+    {
+      "id": "64f0",
+      "username": "sp",
+      "email": "sp@user.com",
+      "password": "spuser"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "be96",
+      "name": "Macbook Pro",
+      "price": "310990",
+      "category": "Laptops",
+      "color": "Black",
+      "description": "Apple Macbook Pro with M4 Max",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp14-spaceblack-select-202410?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1728916305295",
+      "quantity": 1,
+      "productId": "e341",
+      "userId": "6397"
+    },
+    {
+      "id": "9f87",
+      "name": "iPad Air - 5th Gen",
+      "price": "55600",
+      "category": "Tablets",
+      "color": "Pink",
+      "description": "Apple iPad Air 5th Generation Wi-Fi (10.9 Inch, 64GB, Pink, 2022 model)",
+      "image": "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1685968471/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/264353_nx2kb9.png?tr=w-600",
+      "quantity": 2,
+      "productId": "cc66",
+      "userId": "6397"
+    },
+    {
+      "id": "c796",
+      "name": "Apple Headphones",
+      "price": "56000",
+      "category": "Headphones",
+      "color": "Black",
+      "description": "Apple Airpods Max Wireless Over-ear headphones",
+      "image": "https://m.media-amazon.com/images/I/711XEmS1BNL.jpg",
+      "quantity": 1,
+      "productId": "3733",
+      "userId": "6397"
+    }
+  ],
   "orders": [
     {
       "id": "a5e7",

@@ -1,64 +1,135 @@
 <div class="user-auth">
   <!-- left side design -->
   <div class="user-design">
-    <h1>BECOME A MEMBER TODAY</h1>
-    <p>SIGN UP TO SEE EXCITING OFFERS</p>
+    <h1>Ready to Sell?</h1>
+    <p>TECHZY gives you everything you need. Fast. Simple. Free.</p>
   </div>
   <!-- right side design -->
   <!-- sign up form -->
+
+  <!-- NEW SIGN UP FORM START -->
   <div class="sign-up" *ngIf="!showLogin">
-    <form
-      class="common-form"
-      #userSignUp="ngForm"
-      (ngSubmit)="signUp(userSignUp.value)"
-    >
-      <h1>SIGN UP</h1>
-      <div class="input-box">
-        <input
-          type="text"
-          class="form-input"
-          name="username"
-          placeholder="USERNAME"
-          ngModel
-        />
-      </div>
-      <div class="input-box">
-        <input
-          type="email"
-          class="form-input"
-          name="email"
-          placeholder="EMAIL"
-          ngModel
-        />
-      </div>
-      <div class="input-box">
-        <input
-          type="password"
-          class="form-input"
-          name="password"
-          placeholder="PASSWORD"
-          ngModel
-        />
-      </div>
-      <button class="form-button">SIGN UP</button>
-      <div class="text">
-        <h3>
+    <div class="card">
+      <h2 class="form-heading">Start Your Techzy Journey</h2>
+      <form
+        class="card-form"
+        #userSignUp="ngForm"
+        (ngSubmit)="signUp(userSignUp.value)"
+      >
+        <div class="input">
+          <input
+            type="text"
+            class="input-field"
+            name="username"
+            placeholder="johndoe"
+            ngModel
+          />
+          <label class="input-label">Username</label>
+        </div>
+        <div class="input">
+          <input
+            type="email"
+            class="input-field"
+            name="email"
+            placeholder="johndoe@abc.com"
+            ngModel
+          />
+          <label class="input-label">Email</label>
+        </div>
+        <div class="input">
+          <input
+            type="password"
+            class="input-field"
+            name="password"
+            placeholder="password"
+            ngModel
+          />
+          <label class="input-label">Password</label>
+        </div>
+        <div class="action">
+          <button class="action-button">Get started</button>
+        </div>
+      </form>
+      <div class="card-info">
+        <p>
           Already a Member?
           <a (click)="openLogin()" class="redirect-button">Login Now</a>
-        </h3>
+        </p>
       </div>
-    </form>
+    </div>
   </div>
-  <!-- end of user sign-up form -->
-  <!-- login form -->
-  <div class="login" *ngIf="showLogin">
+
+  <!-- NEW SIGN UP FORM END -->
+
+  <!-- NEW LOGIN FORM START-->
+  <div class="sign-up" *ngIf="showLogin">
+    <div class="card">
+      <h2 class="form-heading">Let's Get You In</h2>
+      <form
+        class="card-form"
+        #userLogin="ngForm"
+        (ngSubmit)="login(userLogin.value)"
+      >
+        <!-- <p class="error-p">{{ authError }}</p> -->
+        <div class="input">
+          <input
+            type="text"
+            class="input-field"
+            placeholder=" "
+            name="email"
+            ngModel
+            email
+            #email="ngModel"
+            required
+          />
+          <label class="input-label">Email</label>
+        </div>
+        <!-- <p class="invalid-input" *ngIf="email.invalid && email.touched">
+          PLEASE ENTER A VALID EMAIL
+        </p> -->
+        <div class="input">
+          <input
+            type="password"
+            class="input-field"
+            name="password"
+            placeholder=" "
+            ngModel
+            minlength="2"
+            maxlength="20"
+            #password="ngModel"
+            required
+          />
+          <label class="input-label">Password</label>
+          <!-- error message when password field is empty -->
+          <!-- <p class="invalid-input" *ngIf="password.invalid && password.touched">
+            PLEASE ENTER A VALID EMAIL
+          </p> -->
+        </div>
+        <div class="action">
+          <button [disabled]="userLogin.invalid" class="action-button">
+            Login
+          </button>
+        </div>
+      </form>
+      <div class="card-info">
+        <p>
+          Already a Member?
+          <a (click)="openSignup()" class="redirect-button">Sign Up Now</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- NEW LOGIN FORM END-->
+  <!-- OLD LOGIN FORM START-->
+
+  <!-- <div class="login" *ngIf="showLogin">
     <form
       class="common-form"
       #userLogin="ngForm"
       (ngSubmit)="login(userLogin.value)"
     >
       <h1>LOGIN</h1>
-      <!-- error message when login fails -->
+      
       <p class="error-p">{{ authError }}</p>
 
       <div class="input-box">
@@ -73,7 +144,7 @@
           required
         />
       </div>
-      <!-- error message when email field is empty -->
+      
       <p class="invalid-input" *ngIf="email.invalid && email.touched">
         PLEASE ENTER A VALID EMAIL
       </p>
@@ -90,7 +161,7 @@
           required
         />
       </div>
-      <!-- error message when password field is empty -->
+      
       <p class="invalid-input" *ngIf="password.invalid && password.touched">
         PLEASE ENTER A VALID EMAIL
       </p>
@@ -100,4 +171,5 @@
       </div>
     </form>
   </div>
+   -->
 </div>
