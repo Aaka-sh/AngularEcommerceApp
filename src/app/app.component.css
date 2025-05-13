@@ -1,3 +1,13 @@
 .container {
   width: 100%;
 }
+
+.header-class {
+  position: fixed;
+}
+
+.header-class::after {
+  content: "";
+  display: block;
+  height: 48px; /* similar as navbar height */
+}

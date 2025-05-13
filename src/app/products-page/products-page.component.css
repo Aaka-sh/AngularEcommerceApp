@@ -3,9 +3,10 @@
 .product-list-wrapper {
   font-family: "Poppins", sans-serif;
   width: 100vw;
-  padding: 50px;
+  padding: 120px 50px 50px 50px;
   background: linear-gradient(
     180deg,
+    #000000,
     #000000,
     #000000,
     #0f172a,
@@ -15,6 +16,9 @@
     #0f172a,
     #000000
   );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .products-container {
@@ -29,8 +33,13 @@
   border-radius: 10px;
   margin-bottom: 40px;
   box-sizing: border-box;
-  background-color: #364361;
+  background-color: #1d273e;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
 }
 
 .product-item img {
@@ -48,6 +57,12 @@
 .product-item .name-head {
   font-size: 20px;
   font-weight: 600;
+  white-space: normal;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-item h6 {
