@@ -1,17 +1,16 @@
 <!-- Product -->
 <div id="products" class="product-list-wrapper">
-  <h1 class="text-center mb-5">AVAILABLE PRODUCTS</h1>
+  <div class="container2">
+    <h1 class="typing-text1">AVAILABLE PRODUCTS</h1>
+  </div>
   <div class="products-container">
     <div class="col-sm-25" *ngFor="let item of allProducts">
       <div class="product-item">
         <img src="{{ item.image }}" alt="" />
         <div class="product-details">
-          <h6 class="name-head">{{ item.name }}</h6>
+          <h6 class="name-head">{{ item.name }}, {{ item.color }}</h6>
           <div class="product-price">
-            <h6>Price: {{ item.price }}</h6>
-          </div>
-          <div class="product-color">
-            <h6>Color: {{ item.color }}</h6>
+            <h6>&#8377; {{ item.price }}</h6>
           </div>
         </div>
         <div class="product-footer">

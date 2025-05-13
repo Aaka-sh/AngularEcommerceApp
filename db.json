@@ -37,7 +37,7 @@
       "price": "69000",
       "category": "Mobile Phone",
       "color": "Black",
-      "description": "Super Retina XDR display, Advanced dual-camera system with 12MP Wide and Ultra Wide cameras, Night mode, 4K Dolby Vision HDR recording. 12MP TrueDepth front camera with Night mode",
+      "description": "6.1-inch Super Retina XDR display, Cinematic mode, Advanced dual-camera system with 12MP Wide and Ultra Wide cameras, Photographic Styles, Smart HDR 4, Night mode, 4K Dolby Vision HDR recording, 12MP TrueDepth front camera with Night mode, A15 Bionic chip for lightning-fast performance",
       "image": "https://vasanthandco.in/images/productimages/1903__product__Mobiles__apple-mobile-iphone-13-blue-128gb-2.png",
       "id": "b4a2"
     },
@@ -47,7 +47,7 @@
       "price": "55600",
       "category": "Tablets",
       "color": "Pink",
-      "description": "Apple iPad Air 5th Generation Wi-Fi (10.9 Inch, 64GB, Pink, 2022 model)",
+      "description": "Immersive 27.69 cm (10.9″) Liquid Retina display, Touch ID, advanced cameras, superfast 5G and Wi-Fi 6, and a USB-C connector, Supercharged by Apple M1 Chip, 12MP Ultra Wide camera with Centre Stage",
       "image": "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1685968471/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/264353_nx2kb9.png?tr=w-600"
     },
     {
@@ -56,16 +56,16 @@
       "price": "310990",
       "category": "Laptops",
       "color": "Black",
-      "description": "Apple Macbook Pro with M4 Max",
+      "description": "10-core CPU with 4 performance cores and 6 efficiency cores, 10-core GPU, Hardware-accelerated ray tracing, 16-core Neural Engine, 120GB/s memory bandwidth, Hardware-accelerated H.264, HEVC, ProRes and ProRes RAW, Video decode engine, Video encode engine",
       "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp14-spaceblack-select-202410?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1728916305295"
     },
     {
       "id": "1bab",
-      "name": "Airpods",
+      "name": "Apple Airpods Pro",
       "price": "23000",
       "category": "Earphones",
       "color": "White",
-      "description": "Apple Airpods Pro (2nd Generation)",
+      "description": "Experience immersive sound with Active Noise Cancellation, Footnote Adaptive Audio, Transparency mode, Loud Sound Reduction, Conversation Boost, play calming Background Sounds, Wireless MagSafe Charging Case (USB-C), IP54 dust, sweat and water resistant",
       "image": "https://www.imagineonline.store/cdn/shop/files/AirPods_Pro_2_PDP_Image_Position_1__en-IN.jpg?v=1727267585"
     },
     {
@@ -74,7 +74,7 @@
       "price": "56000",
       "category": "Headphones",
       "color": "Black",
-      "description": "Apple Airpods Max Wireless Over-ear headphones",
+      "description": "Personalised Spatial Audio with dynamic head tracking, Pro-level Active Noise Cancellation to remove unwanted noise, Transparency mode, USB-C that enables Lossless Audio, Up to 20 hours of battery life on a single charge, On-head detection",
       "image": "https://m.media-amazon.com/images/I/711XEmS1BNL.jpg"
     },
     {
@@ -83,7 +83,7 @@
       "price": "59900",
       "category": "Watches",
       "color": "Black",
-      "description": "Apple Watch Series 10 GPS + Cellular, 46mm Jet Black Aluminium Case with Black Sport Band - M/L",
+      "description": "Bigger display with up to 30% more screen area, thinner, lighter and more comfortable design, Advanced health and fitness features provide invaluable insights, Safety features connect you to help when you need it, Faster charging gives you 80% battery in about 30 minutes",
       "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MXM23ref_FV99_VW_34FR+watch-case-46-aluminum-jetblack-cell-s10_VW_34FR+watch-face-46-aluminum-jetblack-s10_VW_34FR?wid=752&hei=720&bgc=fafafa&trim=1&fmt=p-jpg&qlt=80&.v=TnVrdDZWRlZzTURKbHFqOGh0dGpVRW5TeWJ6QW43NUFnQ2V4cmRFc1VnYUdWejZ5THhpKzJwRmRDYlhxN2o5aWp3UWRQeU9ENTVkdnpWZ2VCQ1JYVkF1Z0RaeFB5LzRxZEliRVE2WkswOW5YNUh6UG9VcVpLK2VQampYMHFQR0ZraFRqYm9IdFcyZHNBc3g5MFNqQkIxRVpGM0VTYkFEYWkrVUpmdm5HMEsvZzdYL1dmbHI1ck0vS0dDZmJkTUNtcXlYK1hMV0U1ZW9xcCtlRHF3V3gyZThGL0dtL1JkeEJQSnRCMXJsZFBFY2doN2ZiODFwWklZeDgrZ0RtbVRXag"
     },
     {
@@ -91,7 +91,7 @@
       "price": "27180",
       "category": "iPod",
       "color": "Grey",
-      "description": "Apple Ipod Classic 7th Gen Purple Upgraded With SDXC Card, Custom Media Player 128GB",
+      "description": "160GB storage capacity, 2.5-inch color LCD display, Click Wheel navigation, Up to 36 hours of music playback, USB 2.0 connectivity, Support for MP3, AAC, WAV, AIFF, and Apple Lossless formats, Built-in games and extras, Syncs with iTunes, Polished anodized aluminum and stainless steel design, Holds up to 40,000 songs or 200 hours of video.",
       "image": "https://m.media-amazon.com/images/I/61rcCIWimOL.jpg",
       "id": "b588"
     }
@@ -141,30 +141,6 @@
     }
   ],
   "cart": [
-    {
-      "id": "be96",
-      "name": "Macbook Pro",
-      "price": "310990",
-      "category": "Laptops",
-      "color": "Black",
-      "description": "Apple Macbook Pro with M4 Max",
-      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp14-spaceblack-select-202410?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1728916305295",
-      "quantity": 1,
-      "productId": "e341",
-      "userId": "6397"
-    },
-    {
-      "id": "9f87",
-      "name": "iPad Air - 5th Gen",
-      "price": "55600",
-      "category": "Tablets",
-      "color": "Pink",
-      "description": "Apple iPad Air 5th Generation Wi-Fi (10.9 Inch, 64GB, Pink, 2022 model)",
-      "image": "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1685968471/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/264353_nx2kb9.png?tr=w-600",
-      "quantity": 2,
-      "productId": "cc66",
-      "userId": "6397"
-    },
     {
       "id": "c796",
       "name": "Apple Headphones",

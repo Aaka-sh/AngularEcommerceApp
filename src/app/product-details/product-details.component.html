@@ -1,39 +1,33 @@
 <div class="row product-details" *ngIf="productData">
-  <div class="col-sm-5">
+  <div class="col-sm-5 product-image">
     <img class="product-img" src="{{ productData.image }}" alt="" />
   </div>
-  <div class="col-sm-7">
-    <div class="details">
-      <h1>{{ productData.name }}</h1>
-      <h6><b>Price:</b> {{ productData.price }}</h6>
-      <div>
-        <span><b>Color: </b></span>
-        <h3
-          [style.backgroundColor]="productData.color"
-          class="product-color"
-        ></h3>
-      </div>
+  <div class="col-sm-7 details-container">
+    <h1>{{ productData.name }}</h1>
+    <h6>({{ productData.category }})</h6>
+    <h5><b>Color: </b> {{ productData.color }}</h5>
+    <h5></h5>
+    <h5><b>MRP: </b>&#8377; {{ productData.price }}/-</h5>
+    <h5><b>Description:</b></h5>
+    <p>{{ productData.description }}</p>
 
-      <h6><b>Category:</b> {{ productData.category }}</h6>
-      <h6><b>Description:</b></h6>
-      <p>{{ productData.description }}</p>
-      <p><b>Quantity:</b></p>
-      <div class="quantity-group">
-        <button class="minus-button" (click)="handleQuantity('min')">-</button>
-        <input type="text" value="{{ productQuantity }}" />
-        <button class="plus-button" (click)="handleQuantity('add')">+</button>
-      </div>
-      <button
-        *ngIf="removeCart"
-        class="product-button"
-        (click)="removeFromCart(productData.id)"
-      >
-        Remove Item
-      </button>
-      <button *ngIf="!removeCart" class="product-button" (click)="addToCart()">
-        Add to Cart
-      </button>
-      <button class="product-button">Buy Now</button>
+    <div class="quantity-group">
+      <button class="minus-button" (click)="handleQuantity('min')">-</button>
+      <input type="text" value="{{ productQuantity }}" />
+      <button class="plus-button" (click)="handleQuantity('add')">+</button>
     </div>
+    <button
+      *ngIf="removeCart"
+      class="product-button"
+      (click)="removeFromCart(productData.id)"
+    >
+      Remove Item
+    </button>
+    <button *ngIf="!removeCart" class="product-button" (click)="addToCart()">
+      Add to Cart
+    </button>
+    <button class="product-button">
+      <a routerLink="/cart-page">Go to Cart</a>
+    </button>
   </div>
 </div>

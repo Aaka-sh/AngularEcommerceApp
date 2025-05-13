@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, RouterLink } from '@angular/router';
 import { ProductService } from '../services/product.service';
 import { cart, product } from '../data-type';
 
@@ -63,8 +63,10 @@ export class ProductDetailsComponent implements OnInit {
   handleQuantity(val: string) {
     if (this.productQuantity <= 5 && val == 'add') {
       this.productQuantity += 1;
+      // this.addToCart();
     } else if (this.productQuantity > 1 && val == 'min') {
       this.productQuantity -= 1;
+      // this.addToCart();
     }
   }
 
