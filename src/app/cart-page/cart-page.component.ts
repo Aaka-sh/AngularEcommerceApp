@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { cart, priceSummary } from '../data-type';
 import { Router } from '@angular/router';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-cart-page',
@@ -11,6 +12,7 @@ import { Router } from '@angular/router';
   styleUrl: './cart-page.component.css',
 })
 export class CartPageComponent implements OnInit {
+  faTimes = faTimes;
   cartData: undefined | cart[];
   priceSummary: priceSummary = {
     price: 0,

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { order } from '../data-type';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-my-orders',
@@ -10,6 +11,7 @@ import { order } from '../data-type';
   styleUrl: './my-orders.component.css',
 })
 export class MyOrdersComponent implements OnInit {
+  faTimes = faTimes;
   orderListData: undefined | order[];
   constructor(private product: ProductService) {}
 

@@ -1,5 +1,7 @@
 <div class="cart-page">
-  <h1>CART PAGE</h1>
+  <div class="container2">
+    <h1 class="typing-text1">CART ITEMS</h1>
+  </div>
   <div class="row">
     <div class="col-sm-8 details">
       <ul *ngFor="let cart of cartData">
@@ -17,7 +19,7 @@
         </li>
         <li>
           <button class="remove-button" (click)="removeFromCart(cart.id)">
-            Remove
+            <fa-icon [icon]="faTimes"></fa-icon>
           </button>
         </li>
       </ul>
