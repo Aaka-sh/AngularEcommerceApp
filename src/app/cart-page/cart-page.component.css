@@ -52,14 +52,12 @@
 
 .details ul {
   padding: 20px;
-  margin: 0;
   list-style-type: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #eee;
   padding-top: 15px;
-  margin-bottom: 15px;
 }
 
 .summary {

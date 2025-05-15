@@ -1,33 +1,57 @@
 .checkout {
   height: 100vh;
-  width: 93vw;
+  width: 100vw;
   overflow-x: hidden;
-  margin: 50px;
+  padding: 80px 50px 50px 50px;
+  background: linear-gradient(
+    180deg,
+    #000000,
+    #000000,
+    #000000,
+    #0f172a,
+    #263458,
+    #1c3160,
+    #1e2a4b,
+    #0f172a,
+    #000000
+  );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.checkout h1 {
-  text-align: center;
-  margin: 30px;
-}
-
-.checkout h3 {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.sign-up {
-  border-radius: 6px;
-  height: 100%;
+.checkout .container2 {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.sign-up form .input-box {
-  height: 40px;
-  margin: 18px 0;
+.checkout .container2 h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.checkout .checkout-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.checkout .checkout-container .total-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 20px;
 }
 
 form .input-box input {
@@ -46,13 +70,13 @@ form .input-box input {
 
 form h3 {
   margin-top: 10px;
-  color: #707070;
+  color: white;
   font-size: 14px;
   font-weight: 500;
   margin-left: 10px;
 }
 form .text h3 {
-  color: #333;
+  color: white;
   width: 100%;
   text-align: center;
 }
@@ -68,4 +92,127 @@ form .text h3 a:hover {
 .message-p {
   text-align: center;
   color: green;
+}
+
+/* new form related css */
+
+.card {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(#999, 0.25);
+  padding: 30px 20px;
+}
+
+/* .card-image {
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 65%;
+  background-image: url("https://assets.codepen.io/285131/coffee_1.jpg");
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: 0 5%;
+  position: relative;
+} */
+
+.card-heading {
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  right: 10%;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #735400;
+  line-height: 1.222;
+  small {
+    display: block;
+    font-size: 0.75em;
+    font-weight: 400;
+    margin-top: 0.25em;
+  }
+}
+
+.card-form {
+  padding: 2rem 1rem 0;
+}
+
+.input {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding-top: 1.5rem;
+  & + .input {
+    margin-top: 1.5rem;
+  }
+}
+
+.input-label {
+  color: #8597a3;
+  position: absolute;
+  top: 1.5rem;
+  transition: 0.25s ease;
+}
+
+.input-field {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font: inherit;
+  font-size: 1rem;
+  padding: 0.25rem 0;
+  &:focus,
+  &:valid {
+    outline: 0;
+    border-bottom-color: #000000;
+    & + .input-label {
+      color: #000000;
+      transform: translateY(-1.5rem);
+    }
+  }
+}
+
+.form-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b; /* or white if on dark bg */
+  margin-bottom: 1rem;
+}
+
+.action {
+  margin-top: 2rem;
+}
+
+.action-button {
+  font: inherit;
+  font-size: 1.25rem;
+  padding: 0.4em;
+  width: 100%;
+  font-weight: 500;
+  background-color: #0d1b2a;
+  border-radius: 6px;
+  color: #fff;
+  border: 0;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.card-info {
+  padding: 1rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #8597a3;
+  a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+  }
+}
+
+.redirect-button {
+  cursor: pointer;
 }

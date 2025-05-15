@@ -1,8 +1,42 @@
 .my-orders {
   height: 100vh;
-  width: 93vw;
-  overflow-x: hidden;
+  width: 100vw;
   padding: 100px 50px 50px 50px;
+  background: linear-gradient(
+    180deg,
+    #000000,
+    #000000,
+    #000000,
+    #0f172a,
+    #263458,
+    #1c3160,
+    #1e2a4b,
+    #0f172a,
+    #000000
+  );
+}
+
+.my-orders .container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.my-orders .container2 h1 {
+  margin-bottom: 50px;
+  font-size: 3rem;
+  color: white;
+}
+
+.my-orders .order-header {
+  color: white;
+  border-bottom: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px 20px 40px;
 }
 
 .my-orders h1 {
@@ -19,13 +53,23 @@
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .cancel-button {
   border-radius: 50px;
-  background-color: black;
+  background-color: transparent;
   padding: 5px 20px 5px 20px;
-  color: white;
-  border: none;
+  color: #afcbff;
+  border: 2px solid #afcbff;
   margin: 20px 20px 20px 0px;
+}
+
+.cancel-button:hover {
+  border: 2px solid white;
+  color: white;
 }

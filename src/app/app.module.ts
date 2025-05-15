@@ -25,6 +25,11 @@ import { CartPageComponent } from './cart-page/cart-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
+import { ConfirmDialogComponent } from './shared/confirm-dialog/confirm-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -43,6 +48,7 @@ import { ProductsPageComponent } from './products-page/products-page.component';
     CheckoutComponent,
     MyOrdersComponent,
     ProductsPageComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +56,10 @@ import { ProductsPageComponent } from './products-page/products-page.component';
     FormsModule,
     FontAwesomeModule,
     NgbModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatIconModule,
   ],
   providers: [
     provideClientHydration(withEventReplay()),

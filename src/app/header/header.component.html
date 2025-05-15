@@ -26,30 +26,37 @@
       <li><a routerLink="/user-auth"> USER LOGIN/SIGN-UP</a></li>
       <li><a routerLink="/seller-auth">SELLER</a></li>
       <li>
-        <a href="#">CART({{ cartItems }})</a>
+        <a href="/user-auth"
+          ><fa-icon [icon]="bagIcon"></fa-icon> {{ cartItems }}</a
+        >
       </li>
     </ul>
     <!-- default menu end -->
+
     <!-- user menu start -->
     <ul *ngSwitchCase="'user'">
-      <li>
-        <a href="#">HI {{ userName | uppercase }}!</a>
-      </li>
       <li><a routerLink="">HOME</a></li>
       <li><a routerLink="products-page">PRODUCTS</a></li>
 
-      <!-- if the cart is empty, then it wont navigate to cart page -->
+      <li>
+        <button mat-button [matMenuTriggerFor]="userMenu" class="user-button">
+          HI {{ userName | uppercase }}!
+          <fa-icon [icon]="caretDownIcon"></fa-icon>
+        </button>
+        <mat-menu #userMenu="matMenu">
+          <button mat-menu-item routerLink="my-orders">MY ORDERS</button>
+          <button mat-menu-item (click)="userLogout()">LOGOUT</button>
+        </mat-menu>
+      </li>
       <li>
         <a [routerLink]="cartItems > 0 ? 'cart-page' : null"
-          >CART({{ cartItems }})</a
+          ><fa-icon style="font-size: 1.2rem" [icon]="bagIcon"></fa-icon>
+          {{ cartItems }}</a
         >
       </li>
-      <li>
-        <a routerLink="my-orders">MY ORDERS</a>
-      </li>
-      <li><a (click)="userLogout()">LOGOUT</a></li>
     </ul>
     <!-- user menu end -->
+
     <!-- seller menu start -->
     <ul *ngSwitchCase="'seller'">
       <li>

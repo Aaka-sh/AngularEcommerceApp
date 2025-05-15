@@ -1,17 +1,22 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
+
 import { ProductService } from '../services/product.service';
 import { product } from '../data-type';
 @Component({
   selector: 'app-header',
   standalone: false,
-
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
+  showDropdown = false;
   searchIcon = faSearch; //search icon
+  caretDownIcon = faCaretDown; //caret down icon
+  bagIcon = faShoppingBag; //shopping bag icon
   sellerName: string = ''; //seller name
   userName: string = ''; //user name
   menuType: string = 'default'; //creating a flag-type variable to track whether the seller is logged in or not
@@ -86,12 +91,14 @@ export class HeaderComponent {
   }
 
   submitSearch(val: string) {
-    console.warn(val);
-    this.route.navigate(['/']);
-    this.route.navigate([`search/${val}`]);
+    this.route.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.route.navigate([`search/${val}`]);
+    });
   }
 
   redirectToDetails(id: string) {
-    this.route.navigate(['details/' + id]);
+    this.route.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.route.navigate(['details/' + id]);
+    });
   }
 }

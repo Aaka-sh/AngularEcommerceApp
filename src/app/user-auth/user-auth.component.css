@@ -113,7 +113,7 @@ input {
   padding: 0.75rem;
 }
 
-.card-image {
+/* .card-image {
   border-radius: 8px;
   overflow: hidden;
   padding-bottom: 65%;
@@ -122,7 +122,7 @@ input {
   background-size: 150%;
   background-position: 0 5%;
   position: relative;
-}
+} */
 
 .card-heading {
   position: absolute;

@@ -1,47 +1,56 @@
 <div class="checkout">
-  <h1>CHECKOUT</h1>
-  <div class="row">
-    <div class="col-sm-5">
-      <h3>Total: {{ totalPrice }}</h3>
-      <h4>Payment Method: <b>Pay On Delivery</b></h4>
+  <div class="container2">
+    <h1 class="typing-text1">CHECKOUT</h1>
+  </div>
+  <div class="row checkout-container" style="color: white">
+    <div class="col-sm-5 total-details">
+      <p>Total: {{ totalPrice }}</p>
+      <p>Payment Method: <b>Pay On Delivery</b></p>
     </div>
-    <div class="col-sm-7 sign-up">
-      <h3>Add Shipping Address</h3>
-      <p class="message-p">{{ orderMessage }}</p>
+    <!-- new form starts -->
+    <div class="card">
+      <h2 class="form-heading">Shipping Address</h2>
+      <p *ngIf="orderMessage" class="message-p">{{ orderMessage }}</p>
       <form
         #orderData="ngForm"
-        class="common-form"
+        class="card-form"
         (ngSubmit)="orderNow(orderData.value)"
       >
-        <div class="input-box">
+        <div class="input">
           <input
             type="text"
-            class="form-input"
+            class="input-field"
             name="email"
-            placeholder="EMAIL"
             ngModel
+            required
           />
+          <label class="input-label">Email</label>
         </div>
-        <div class="input-box">
+        <div class="input">
           <input
-            type="text"
-            class="form-input"
+            type="email"
+            class="input-field"
             name="address"
-            placeholder="ADDRESS"
             ngModel
+            required
           />
+          <label class="input-label">Full Address</label>
         </div>
-        <div class="input-box">
+        <div class="input">
           <input
             type="text"
-            class="form-input"
+            class="input-field"
             name="contact"
-            placeholder="CONTACT"
             ngModel
+            required
           />
+          <label class="input-label">Contact Number</label>
         </div>
-        <button class="form-button">ORDER NOW</button>
+        <div class="action">
+          <button class="action-button">Order Now</button>
+        </div>
       </form>
     </div>
+    <!-- new form ends -->
   </div>
 </div>

@@ -32,6 +32,11 @@ export class CheckoutComponent implements OnInit {
   }
 
   orderNow(data: orderDetails) {
+    if (data.address == '' || data.contact == '' || data.email == '') {
+      this.orderMessage = 'Please enter the details';
+      return;
+    }
+
     let user = localStorage.getItem('user');
     let userId = user && JSON.parse(user).id;
     if (this.totalPrice) {
