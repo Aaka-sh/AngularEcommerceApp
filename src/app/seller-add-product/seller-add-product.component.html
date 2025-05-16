@@ -1,81 +1,86 @@
 <div class="add-product">
-  <h1 style="text-align: center">ADD NEW PRODUCT</h1>
+  <div class="container2">
+    <h1 class="typing-text1">ADD NEW PRODUCT</h1>
+  </div>
   <p class="message-p">{{ addProductMessage }}</p>
-  <form
-    #addProduct="ngForm"
-    class="common-form"
-    (ngSubmit)="submit(addProduct.value)"
-  >
-    <div class="form-section">
-      <div class="cell">
-        <span>NAME</span>
-        <input
-          type="text"
-          class="form-input"
-          placeholder="ENTER PRODUCT NAME"
-          name="name"
-          ngModel
-        />
+  <div class="card">
+    <form
+      #addProduct="ngForm"
+      class="card-form"
+      (ngSubmit)="submit(addProduct.value)"
+    >
+      <div class="form-section">
+        <div class="input">
+          <input
+            type="text"
+            class="input-field"
+            name="name"
+            placeholder="Product Name"
+            ngModel
+          />
+          <label class="input-label">Product Name</label>
+        </div>
+        <div class="input">
+          <input
+            type="text"
+            class="input-field"
+            name="price"
+            placeholder="Product Price"
+            ngModel
+          />
+          <label class="input-label">Product Price</label>
+        </div>
       </div>
-      <div class="cell">
-        <span>PRICE</span>
-        <input
-          type="text"
-          class="form-input"
-          placeholder="ENTER PRODUCT PRICE"
-          name="price"
-          ngModel
-        />
-      </div>
-    </div>
 
-    <div class="form-section">
-      <div class="cell">
-        <span>CATEGORY</span>
-        <input
-          type="text"
-          class="form-input"
-          placeholder="ENTER PRODUCT CATEGORY"
-          name="category"
-          ngModel
-        />
+      <div class="form-section">
+        <div class="input">
+          <input
+            type="text"
+            class="input-field"
+            name="category"
+            placeholder="Product Category"
+            ngModel
+          />
+          <label class="input-label">Product Category</label>
+        </div>
+        <div class="input">
+          <input
+            type="text"
+            class="input-field"
+            name="color"
+            placeholder="Product Color"
+            ngModel
+          />
+          <label class="input-label">Product Color</label>
+        </div>
       </div>
-      <div class="cell">
-        <span>COLOR</span>
-        <input
-          type="text"
-          class="form-input"
-          placeholder="ENTER PRODUCT COLOR"
-          name="color"
-          ngModel
-        />
+      <div class="form-section">
+        <div class="input1">
+          <input
+            type="text"
+            class="input-field"
+            name="description"
+            placeholder="Product Description"
+            ngModel
+          />
+          <label class="input-label">Product Description</label>
+        </div>
       </div>
-    </div>
-    <div class="form-section">
-      <div class="cell">
-        <span>DESCRIPTION</span>
-        <textarea
-          rows="10"
-          type="text"
-          class="form-input"
-          placeholder="ENTER PRODUCT DESCRIPTION"
-          name="description"
-          ngModel
-        ></textarea>
+      <div class="form-section">
+        <div class="input1">
+          <input
+            type="text"
+            class="input-field"
+            name="image"
+            placeholder="Product Image"
+            ngModel
+          />
+          <label class="input-label">Product Image URL</label>
+        </div>
       </div>
-    </div>
-    <div class="form-section">
-      <div class="cell">
-        <span>IMAGE URL</span>
-        <input
-          type="text"
-          class="form-input"
-          placeholder="ENTER PRODUCT IMAGE URL"
-          name="image"
-          ngModel
-        />
+      <div class="action">
+        <button class="action-button">ADD PRODUCT</button>
       </div>
-    </div>
-    <button class="add-button">ADD PRODUCT</button>
-  </form>
+    </form>
+  </div>
 </div>

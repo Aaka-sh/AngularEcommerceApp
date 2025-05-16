@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
-
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { ProductService } from '../services/product.service';
 import { product } from '../data-type';
 @Component({
@@ -14,6 +14,7 @@ import { product } from '../data-type';
 })
 export class HeaderComponent {
   showDropdown = false;
+  cartIcon = faCartShopping; //cart icon
   searchIcon = faSearch; //search icon
   caretDownIcon = faCaretDown; //caret down icon
   bagIcon = faShoppingBag; //shopping bag icon
@@ -34,7 +35,7 @@ export class HeaderComponent {
           let sellerStore = localStorage.getItem('seller');
           //this will check if the sellerstore is empty before assigning value to sellerdata
           let sellerData = sellerStore && JSON.parse(sellerStore)[0];
-          this.sellerName = sellerData.name;
+          this.sellerName = sellerData.username;
           this.menuType = 'seller';
         } else if (localStorage.getItem('user')) {
           let userStore = localStorage.getItem('user');

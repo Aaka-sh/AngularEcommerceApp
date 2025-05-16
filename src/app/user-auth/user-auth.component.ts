@@ -6,7 +6,6 @@ import { ProductService } from '../services/product.service';
 @Component({
   selector: 'app-user-auth',
   standalone: false,
-
   templateUrl: './user-auth.component.html',
   styleUrl: './user-auth.component.css',
 })

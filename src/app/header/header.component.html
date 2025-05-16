@@ -23,11 +23,10 @@
     <!-- default menu start -->
     <ul *ngSwitchCase="'default'">
       <li><a routerLink="">HOME</a></li>
-      <li><a routerLink="/user-auth"> USER LOGIN/SIGN-UP</a></li>
-      <li><a routerLink="/seller-auth">SELLER</a></li>
+      <li><a routerLink="/user-auth"> LOGIN</a></li>
       <li>
         <a href="/user-auth"
-          ><fa-icon [icon]="bagIcon"></fa-icon> {{ cartItems }}</a
+          ><fa-icon [icon]="cartIcon"></fa-icon> {{ cartItems }}</a
         >
       </li>
     </ul>
@@ -35,6 +34,12 @@
 
     <!-- user menu start -->
     <ul *ngSwitchCase="'user'">
+      <li>
+        <a [routerLink]="cartItems > 0 ? 'cart-page' : null"
+          ><fa-icon style="font-size: 1.2rem" [icon]="cartIcon"></fa-icon>
+          {{ cartItems }}</a
+        >
+      </li>
       <li><a routerLink="">HOME</a></li>
       <li><a routerLink="products-page">PRODUCTS</a></li>
 
@@ -48,23 +53,24 @@
           <button mat-menu-item (click)="userLogout()">LOGOUT</button>
         </mat-menu>
       </li>
-      <li>
-        <a [routerLink]="cartItems > 0 ? 'cart-page' : null"
-          ><fa-icon style="font-size: 1.2rem" [icon]="bagIcon"></fa-icon>
-          {{ cartItems }}</a
-        >
-      </li>
     </ul>
     <!-- user menu end -->
 
     <!-- seller menu start -->
     <ul *ngSwitchCase="'seller'">
       <li>
-        <a href="#">HI {{ sellerName | uppercase }}!</a>
+        <button mat-button [matMenuTriggerFor]="userMenu" class="user-button">
+          HI {{ sellerName | uppercase }}!
+          <fa-icon [icon]="caretDownIcon"></fa-icon>
+        </button>
+        <mat-menu #userMenu="matMenu">
+          <button mat-menu-item routerLink="seller-add-product">
+            ADD RPODUCT
+          </button>
+          <button mat-menu-item routerLink="seller-home">ALL PRODUCTS</button>
+          <button mat-menu-item (click)="logout()">LOGOUT</button>
+        </mat-menu>
       </li>
-      <li><a routerLink="seller-add-product">ADD RPODUCT</a></li>
-      <li><a routerLink="seller-home">LIST</a></li>
-      <li><a (click)="logout()">LOGOUT</a></li>
     </ul>
     <!-- seller menu end -->
   </div>

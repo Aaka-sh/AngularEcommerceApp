@@ -1,11 +1,26 @@
 .seller-auth {
   display: flex;
-  height: calc(100vh - 50px);
   width: 100vw;
+  padding: 120px 50px 50px 50px;
+  background: linear-gradient(
+    180deg,
+    #000000,
+    #000000,
+    #000000,
+    #0f172a,
+    #263458,
+    #1c3160,
+    #1e2a4b,
+    #0f172a,
+    #000000
+  );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .seller-design {
-  height: 100%;
+  width: 40%;
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
@@ -14,62 +29,148 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.seller-design {
-  width: 40%;
-  background-color: #e0e0e0;
+  color: white;
 }
 
 .sign-up,
 .login {
+  font-weight: 300;
   width: 60%;
-  border-radius: 6px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
+
+  /* background-color: #1b263b; */
 }
 
 .sign-up form .input-box,
 .login form .input-box {
   height: 40px;
-  margin: 18px 0;
 }
 
-form .input-box input {
-  height: 100%;
+/* iOS Reset */
+input {
+  appearance: none;
+  border-radius: 0;
+}
+
+.card {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  outline: none;
-  padding: 0 15px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #333;
-  border: 1.5px solid #c7bebe;
-  border-bottom-width: 2.5px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
+  max-width: 425px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(#999, 0.25);
+  padding: 0.75rem;
 }
 
-form h3 {
-  margin-top: 10px;
-  color: #707070;
-  font-size: 14px;
+/* .card-image {
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 65%;
+  background-image: url("https://assets.codepen.io/285131/coffee_1.jpg");
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: 0 5%;
+  position: relative;
+} */
+
+.card-heading {
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  right: 10%;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #735400;
+  line-height: 1.222;
+  small {
+    display: block;
+    font-size: 0.75em;
+    font-weight: 400;
+    margin-top: 0.25em;
+  }
+}
+
+.card-form {
+  padding: 2rem 1rem 0;
+}
+
+.input {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding-top: 1.5rem;
+  & + .input {
+    margin-top: 1.5rem;
+  }
+}
+
+.input-label {
+  color: #8597a3;
+  position: absolute;
+  top: 1.5rem;
+  transition: 0.25s ease;
+}
+
+.input-field {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font: inherit;
+  font-size: 1rem;
+  padding: 0.25rem 0;
+  &:focus,
+  &:valid {
+    outline: 0;
+    border-bottom-color: #000000;
+    & + .input-label {
+      color: #000000;
+      transform: translateY(-1.5rem);
+    }
+  }
+}
+
+.form-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b; /* or white if on dark bg */
+  margin-bottom: 1rem;
+}
+
+.action {
+  margin-top: 2rem;
+}
+
+.action-button {
+  font: inherit;
+  font-size: 1.25rem;
+  padding: 0.4em;
+  width: 100%;
   font-weight: 500;
-  margin-left: 10px;
+  background-color: #0d1b2a;
+  border-radius: 6px;
+  color: #fff;
+  border: 0;
+  &:focus {
+    outline: 0;
+  }
 }
-form .text h3 {
-  color: #333;
-  width: 100%;
+
+.card-info {
+  padding: 1rem 1rem;
   text-align: center;
+  font-size: 0.875rem;
+  color: #8597a3;
+  a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+  }
 }
-form .text h3 a {
-  color: #4070f4;
-  text-decoration: none;
-}
-form .text h3 a:hover {
-  text-decoration: underline;
+
+.redirect-button {
   cursor: pointer;
 }
+/* NEW CHANGES END */

@@ -1,66 +1,35 @@
 <div class="product-list">
-  <h1 class="heading-text">PRODUCT LIST</h1>
-  <!-- updated cards start -->
+  <div class="container2">
+    <h1 class="typing-text1">ADDED PRODUCTS</h1>
+  </div>
   <div class="custom-container">
+    <p class="message-p">{{ productMessage }}</p>
     <div class="custom-card" *ngFor="let item of productList">
       <div class="prod-image"><img src="{{ item.image }}" alt="" /></div>
       <div class="prod-details">
-        <p><b>Name: </b>{{ item.name }}</p>
-        <p><b>Color: </b>{{ item.color }}</p>
-        <p><b>Category: </b>{{ item.category }}</p>
-        <p><b>Description: </b>{{ item.description }}</p>
-      </div>
+        <div class="small-details">
+          <p><b>Name: </b>{{ item.name }}</p>
+          <p><b>Price: </b>{{ item.price }}</p>
+          <p><b>Color: </b>{{ item.color }}</p>
+          <p><b>Category: </b>{{ item.category }}</p>
+        </div>
 
-      <div class="prod-action">
-        <p><b>Price: </b>{{ item.price }}</p>
+        <p style="text-align: justify">
+          <b>Description: </b>{{ item.description }}
+        </p>
+        <div class="prod-action">
+          <button title="Delete Product" (click)="deleteProduct(item.id)">
+            <fa-icon [icon]="faTrash"></fa-icon>
+          </button>
 
-        <button title="Delete Product" (click)="deleteProduct(item.id)">
-          DELETE
-        </button>
-
-        <button
-          title="Update Product"
-          routerLink="/seller-update-product/{{ item.id }}"
-        >
-          UPDATE
-        </button>
+          <button
+            title="Update Product"
+            routerLink="/seller-update-product/{{ item.id }}"
+          >
+            <fa-icon [icon]="faEdit"></fa-icon>
+          </button>
+        </div>
       </div>
     </div>
   </div>
-  <!-- updated cards end -->
-  <p class="message-p">{{ productMessage }}</p>
-  <table>
-    <thead>
-      <tr>
-        <th>IMAGE</th>
-        <th>NAME</th>
-        <th>PRICE</th>
-        <th>COLOR</th>
-        <th>CATEGORY</th>
-        <th>DESCRIPTION</th>
-        <th>ACTION</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of productList">
-        <td><img src="{{ item.image }}" alt="" /></td>
-        <td>{{ item.name }}</td>
-        <td>{{ item.price }}</td>
-        <td>{{ item.color }}</td>
-        <td>{{ item.category }}</td>
-        <td>{{ item.description }}</td>
-        <td>
-          <!-- click event using this button-->
-          <fa-icon [icon]="icon" (click)="deleteProduct(item.id)"></fa-icon>
-          <!-- change routes using this button -->
-          <a
-            class="adjust-update-link"
-            routerLink="/seller-update-product/{{ item.id }}"
-          >
-            <fa-icon [icon]="updateIcon"></fa-icon>
-          </a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
 </div>

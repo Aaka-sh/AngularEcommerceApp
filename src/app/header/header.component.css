@@ -62,6 +62,11 @@
   align-items: center;
 }
 
+.navbar ul li a:hover {
+  color: #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
 .navbar ul li a {
   text-decoration: none;
   color: white;

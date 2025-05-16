@@ -6,48 +6,123 @@
   </div>
   <!-- right side design -->
   <!-- sign up form -->
-  <div *ngIf="!showLogin" class="sign-up">
-    <form
-      class="common-form"
-      #sellerSignUp="ngForm"
-      (ngSubmit)="signUp(sellerSignUp.value)"
-    >
-      <h1>JOIN US!</h1>
-      <div class="input-box">
-        <input
-          type="text"
-          class="form-input"
-          name="username"
-          placeholder="USERNAME"
-          ngModel
-        />
+
+  <!-- new sign up form starts -->
+  <div class="sign-up" *ngIf="!showLogin">
+    <div class="card">
+      <h2 class="form-heading">JOIN TECHZY</h2>
+      <form
+        class="card-form"
+        #sellerSignUp="ngForm"
+        (ngSubmit)="signUp(sellerSignUp.value)"
+      >
+        <div class="input">
+          <input
+            type="text"
+            class="input-field"
+            name="username"
+            placeholder="johndoe"
+            ngModel
+          />
+          <label class="input-label">Username</label>
+        </div>
+        <div class="input">
+          <input
+            type="email"
+            class="input-field"
+            name="email"
+            placeholder="johndoe@abc.com"
+            ngModel
+          />
+          <label class="input-label">Email</label>
+        </div>
+        <div class="input">
+          <input
+            type="password"
+            class="input-field"
+            name="password"
+            placeholder="password"
+            ngModel
+          />
+          <label class="input-label">Password</label>
+        </div>
+        <div class="action">
+          <button class="action-button">Get started</button>
+        </div>
+      </form>
+      <div class="card-info">
+        <p>
+          Already a Member?
+          <a (click)="openLogin()" class="redirect-button">Login Now</a>
+        </p>
       </div>
-      <div class="input-box">
-        <input
-          type="email"
-          class="form-input"
-          name="email"
-          placeholder="EMAIL"
-          ngModel
-        />
-      </div>
-      <div class="input-box">
-        <input
-          type="password"
-          class="form-input"
-          name="password"
-          placeholder="PASSWORD"
-          ngModel
-        />
-      </div>
-      <button class="form-button">SIGN UP</button>
-      <div class="text">
-        <h3>Already have an account? <a (click)="openLogin()">Login now</a></h3>
-      </div>
-    </form>
+    </div>
   </div>
+  <!-- new sign up form ends -->
+
+  <!-- NEW LOGIN FORM STARTS -->
+  <div class="sign-up" *ngIf="showLogin">
+    <div class="card">
+      <h2 class="form-heading">Let's Get You In</h2>
+      <form
+        class="card-form"
+        #sellerLogin="ngForm"
+        (ngSubmit)="login(sellerLogin.value)"
+      >
+        <p class="error-p">{{ authError }}</p>
+        <!-- <p class="error-p">{{ authError }}</p> -->
+        <div class="input">
+          <input
+            type="text"
+            class="input-field"
+            placeholder=" "
+            name="email"
+            ngModel
+            email
+            #email="ngModel"
+            required
+          />
+          <label class="input-label">Email</label>
+        </div>
+        <!-- <p class="invalid-input" *ngIf="email.invalid && email.touched">
+          PLEASE ENTER A VALID EMAIL
+        </p> -->
+        <div class="input">
+          <input
+            type="password"
+            class="input-field"
+            name="password"
+            placeholder=" "
+            ngModel
+            minlength="2"
+            maxlength="20"
+            #password="ngModel"
+            required
+          />
+          <label class="input-label">Password</label>
+          <!-- error message when password field is empty -->
+          <!-- <p class="invalid-input" *ngIf="password.invalid && password.touched">
+            PLEASE ENTER A VALID EMAIL
+          </p> -->
+        </div>
+        <div class="action">
+          <button [disabled]="sellerLogin.invalid" class="action-button">
+            Login
+          </button>
+        </div>
+      </form>
+      <div class="card-info">
+        <p>
+          Not a Member?
+          <a (click)="openSignUp()" class="redirect-button">Sign Up Now</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- NEW LOGIN FORM END-->
+
   <!-- log in form -->
-  <div *ngIf="showLogin" class="login">
+  <!-- <div *ngIf="showLogin" class="login">
     <form
       class="common-form"
       #sellerLogin="ngForm"
@@ -78,5 +153,5 @@
         <h3>New Member? <a (click)="openSignUp()">Register Now</a></h3>
       </div>
     </form>
-  </div>
+  </div> -->
 </div>

@@ -16,9 +16,8 @@ export class SellerHomeComponent implements OnInit {
   productList: undefined | product[];
   //productMessage after the product is deleted
   productMessage: undefined | string;
-
-  icon = faTrash;
-  updateIcon = faEdit;
+  faTrash = faTrash;
+  faEdit = faEdit;
   //instance of product service
   constructor(private product: ProductService, private router: Router) {}
 

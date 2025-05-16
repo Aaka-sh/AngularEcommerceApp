@@ -2,15 +2,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .user-auth {
   display: flex;
-  height: calc(100vh - 50px);
   width: 100vw;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+  padding: 120px 50px 50px 50px;
+  background: linear-gradient(
+    180deg,
+    #000000,
+    #000000,
+    #000000,
+    #0f172a,
+    #263458,
+    #1c3160,
+    #1e2a4b,
+    #0f172a,
+    #000000
+  );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .user-design {
-  height: 100%;
   width: 40%;
   padding: 20px;
   box-sizing: border-box;
@@ -20,7 +31,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #0d1b2a;
   color: #e0e1dd;
 }
 
@@ -34,7 +44,6 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background-color: #1b263b;
 }
 
 .sign-up form .input-box,
@@ -55,27 +64,6 @@ form .input-box input {
   border-bottom-width: 2.5px;
   border-radius: 6px;
   transition: all 0.3s ease;
-}
-
-form h3 {
-  margin-top: 10px;
-  color: #707070;
-  font-size: 14px;
-  font-weight: 500;
-  margin-left: 10px;
-}
-form .text h3 {
-  color: #333;
-  width: 100%;
-  text-align: center;
-}
-form .text h3 a {
-  color: #4070f4;
-  text-decoration: none;
-}
-form .text h3 a:hover {
-  text-decoration: underline;
-  cursor: pointer;
 }
 
 button:disabled {

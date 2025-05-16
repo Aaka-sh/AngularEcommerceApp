@@ -29,6 +29,12 @@
       "username": "jim",
       "email": "jim@seller.com",
       "password": "jimjam"
+    },
+    {
+      "id": "495a",
+      "username": "kristen",
+      "email": "kristen@gmail.com",
+      "password": "kristen"
     }
   ],
   "products": [
@@ -94,6 +100,33 @@
       "description": "160GB storage capacity, 2.5-inch color LCD display, Click Wheel navigation, Up to 36 hours of music playback, USB 2.0 connectivity, Support for MP3, AAC, WAV, AIFF, and Apple Lossless formats, Built-in games and extras, Syncs with iTunes, Polished anodized aluminum and stainless steel design, Holds up to 40,000 songs or 200 hours of video.",
       "image": "https://m.media-amazon.com/images/I/61rcCIWimOL.jpg",
       "id": "b588"
+    },
+    {
+      "id": "7792",
+      "name": "iPhone 15",
+      "price": "81000",
+      "category": "Mobile",
+      "color": "Natural Titanium",
+      "description": "Forged in Titanium, Strong and Light Aerospace-grade titanium design, Splash, watch and dust resistant, A17 Pro Chip, 48MP Main camera, 7 pro lenses",
+      "image": "https://m.media-amazon.com/images/I/81CgtwSII3L.jpg"
+    },
+    {
+      "id": "3764",
+      "name": "iPhone 16",
+      "price": "73500",
+      "category": "Mobile",
+      "color": "Black",
+      "description": "iPhone 16 128 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life, Works with AirPods",
+      "image": "https://m.media-amazon.com/images/I/61135j8fPJL.jpg"
+    },
+    {
+      "id": "1d26",
+      "name": "iPhone 16 Plus",
+      "price": "92900",
+      "category": "Mobile",
+      "color": "White",
+      "description": "iPhone 16 Plus 256 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; White",
+      "image": "https://m.media-amazon.com/images/I/61Brhn4WBIL._SX679_.jpg"
     }
   ],
   "users": [
@@ -151,6 +184,18 @@
       "image": "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1685968471/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/264353_nx2kb9.png?tr=w-600",
       "quantity": 1,
       "productId": "cc66",
+      "userId": "6397"
+    },
+    {
+      "id": "ac62",
+      "name": "iPhone 13",
+      "price": "69000",
+      "category": "Mobile Phone",
+      "color": "Black",
+      "description": "6.1-inch Super Retina XDR display, Cinematic mode, Advanced dual-camera system with 12MP Wide and Ultra Wide cameras, Photographic Styles, Smart HDR 4, Night mode, 4K Dolby Vision HDR recording, 12MP TrueDepth front camera with Night mode, A15 Bionic chip for lightning-fast performance",
+      "image": "https://vasanthandco.in/images/productimages/1903__product__Mobiles__apple-mobile-iphone-13-blue-128gb-2.png",
+      "quantity": 1,
+      "productId": "b4a2",
       "userId": "6397"
     }
   ],
