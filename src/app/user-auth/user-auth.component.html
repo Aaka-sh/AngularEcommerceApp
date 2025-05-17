@@ -16,6 +16,7 @@
         #userSignUp="ngForm"
         (ngSubmit)="signUp(userSignUp.value)"
       >
+        <p class="error-p">{{ authError }}</p>
         <div class="input">
           <input
             type="text"
@@ -70,7 +71,7 @@
         #userLogin="ngForm"
         (ngSubmit)="login(userLogin.value)"
       >
-        <!-- <p class="error-p">{{ authError }}</p> -->
+        <p class="error-p">{{ authError }}</p>
         <div class="input">
           <input
             type="text"

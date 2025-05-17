@@ -1,6 +1,13 @@
 <nav class="navbar">
   <div class="navbar-logo">
-    <a routerLink="/">TECHZY</a>
+    <div [ngSwitch]="menuType" class="logo">
+      <div *ngSwitchCase="'default'"><a routerLink="/">TECHZY</a></div>
+      <div *ngSwitchCase="'user'"><a routerLink="/">TECHZY</a></div>
+      <div *ngSwitchCase="'seller'">
+        <a routerLink="/seller-home">TECHZY</a>
+      </div>
+    </div>
+    <!-- <a routerLink="/">TECHZY</a> -->
   </div>
   <div *ngIf="menuType !== 'seller'" class="nav-search">
     <input

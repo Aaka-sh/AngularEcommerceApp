@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-checkout',
   standalone: false,
-
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.css',
 })
@@ -32,8 +31,38 @@ export class CheckoutComponent implements OnInit {
   }
 
   orderNow(data: orderDetails) {
+    //checking if the address, contact and email fields are empty
     if (data.address == '' || data.contact == '' || data.email == '') {
       this.orderMessage = 'Please enter the details';
+      return;
+    }
+
+    //checking if the address, contact and email are valid using regex
+    //checking if the email, password and name are valid using regex
+    const email = data.email;
+    const address = data.address;
+    const contact = data.contact;
+
+    // Regex patterns
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const addressRegex = /^[a-zA-Z0-9\s,.\-/#()]{5,100}$/;
+    const contactRegex = /^\d{10}$/;
+
+    // Email validation
+    if (!emailRegex.test(email)) {
+      alert('Invalid email format');
+      return;
+    }
+
+    // Username validation
+    if (!addressRegex.test(address)) {
+      alert('Address must be atleast 10 characters');
+      return;
+    }
+
+    // Password validation
+    if (!contactRegex.test(contact)) {
+      alert('Contact number must be 10 digits');
       return;
     }
 

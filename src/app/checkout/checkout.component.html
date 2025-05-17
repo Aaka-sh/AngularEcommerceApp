@@ -10,7 +10,7 @@
     <!-- new form starts -->
     <div class="card">
       <h2 class="form-heading">Shipping Address</h2>
-      <p *ngIf="orderMessage" class="message-p">{{ orderMessage }}</p>
+      <p *ngIf="orderMessage" class="error-p">{{ orderMessage }}</p>
       <form
         #orderData="ngForm"
         class="card-form"

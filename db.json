@@ -171,6 +171,12 @@
       "username": "sp",
       "email": "sp@user.com",
       "password": "spuser"
+    },
+    {
+      "id": "8506",
+      "username": "kalel",
+      "email": "kalel@gmail.com",
+      "password": "@Kalel123"
     }
   ],
   "cart": [
@@ -223,6 +229,14 @@
       "contact": "",
       "totalPrice": 311090,
       "userId": "6397"
+    },
+    {
+      "id": "2ceb",
+      "email": "kalel@gmail.com",
+      "address": "Elect",
+      "contact": "9988998899",
+      "totalPrice": 311090,
+      "userId": "8506"
     }
   ]
 }
