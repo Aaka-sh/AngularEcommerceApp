@@ -34,11 +34,6 @@
   color: white;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
 /* iOS Reset */
 input {
   appearance: none;
@@ -167,9 +162,5 @@ input {
     color: #000000;
     text-decoration: none;
   }
-}
-
-.redirect-button {
-  cursor: pointer;
 }
 /* NEW CHANGES END */

@@ -181,27 +181,27 @@
   ],
   "cart": [
     {
-      "id": "e463",
+      "id": "e054",
+      "name": "Macbook Pro",
+      "price": "310990",
+      "category": "Laptops",
+      "color": "Black",
+      "description": "10-core CPU with 4 performance cores and 6 efficiency cores, 10-core GPU, Hardware-accelerated ray tracing, 16-core Neural Engine, 120GB/s memory bandwidth, Hardware-accelerated H.264, HEVC, ProRes and ProRes RAW, Video decode engine, Video encode engine",
+      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp14-spaceblack-select-202410?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1728916305295",
+      "quantity": 1,
+      "productId": "e341",
+      "userId": "6397"
+    },
+    {
+      "id": "80fe",
       "name": "iPad Air - 5th Gen",
       "price": "55600",
       "category": "Tablets",
       "color": "Pink",
       "description": "Immersive 27.69 cm (10.9″) Liquid Retina display, Touch ID, advanced cameras, superfast 5G and Wi-Fi 6, and a USB-C connector, Supercharged by Apple M1 Chip, 12MP Ultra Wide camera with Centre Stage",
       "image": "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1685968471/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/264353_nx2kb9.png?tr=w-600",
-      "quantity": 1,
+      "quantity": 2,
       "productId": "cc66",
-      "userId": "6397"
-    },
-    {
-      "id": "ac62",
-      "name": "iPhone 13",
-      "price": "69000",
-      "category": "Mobile Phone",
-      "color": "Black",
-      "description": "6.1-inch Super Retina XDR display, Cinematic mode, Advanced dual-camera system with 12MP Wide and Ultra Wide cameras, Photographic Styles, Smart HDR 4, Night mode, 4K Dolby Vision HDR recording, 12MP TrueDepth front camera with Night mode, A15 Bionic chip for lightning-fast performance",
-      "image": "https://vasanthandco.in/images/productimages/1903__product__Mobiles__apple-mobile-iphone-13-blue-128gb-2.png",
-      "quantity": 1,
-      "productId": "b4a2",
       "userId": "6397"
     }
   ],

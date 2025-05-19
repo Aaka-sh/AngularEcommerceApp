@@ -33,6 +33,11 @@
   color: white;
 }
 
+.cart-page .container3 {
+  display: flex;
+  text-align: center;
+}
+
 .cart-page h1 {
   text-align: center;
 }
@@ -42,6 +47,7 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 20px 40px 20px 40px;
+  width: 70%;
 }
 
 .details img {
@@ -60,9 +66,15 @@
   padding-top: 15px;
 }
 
+.details ul li span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
 .summary {
   color: white;
-  padding: 20px 40px 20px 40px;
+  padding: 0px 40px 20px 40px;
+  width: 30%;
 }
 
 .summary h3 {
@@ -76,26 +88,32 @@
   padding: 15px;
 }
 
+.summary-heading {
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
 .summary ul li {
   display: flex;
   justify-content: space-between;
+  padding: 5px 0px 5px 0px;
 }
 .remove-button {
   border-radius: 50px;
   background-color: transparent;
-  border: 2px solid #afcbff;
   padding: 7px 20px 7px 20px;
   color: #afcbff;
+  font-size: 1.2rem;
+  border: none;
   margin: 20px 20px 20px 0px;
 }
 
 .remove-button:hover {
-  border: 2px solid white;
   color: white;
 }
 
 .checkout-btn {
-  border-radius: 50px;
+  border-radius: 10px;
   background-color: transparent;
   padding: 5px 20px 5px 20px;
   color: #afcbff;

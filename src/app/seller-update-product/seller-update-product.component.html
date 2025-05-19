@@ -1,80 +1,85 @@
 <div class="update-product">
-  <h1 style="text-align: center">UPDATE PRODUCT</h1>
+  <div class="container2">
+    <h1 class="typing-text1">UPDATE PRODUCT</h1>
+  </div>
   <p class="message-p">{{ updateProductMessage }}</p>
-  <form
-    #addProduct="ngForm"
-    class="common-form"
-    (submit)="submit(addProduct.value)"
-  >
-    <div class="form-section">
-      <div class="cell">
-        <span>NAME</span>
-        <input
-          type="text"
-          class="form-input"
-          placeholder="ENTER PRODUCT NAME"
-          name="name"
-          ngModel="{{ productData?.name }}"
-        />
+  <div class="card">
+    <form
+      #updateProduct="ngForm"
+      class="card-form"
+      (submit)="submit(updateProduct.value)"
+    >
+      <div class="form-section">
+        <div class="input">
+          <input
+            type="text"
+            class="input-field"
+            name="name"
+            placeholder="Product Name"
+            ngModel="{{ productData?.name }}"
+          />
+          <label class="input-label">Product Name</label>
+        </div>
+        <div class="input">
+          <input
+            type="text"
+            class="input-field"
+            name="price"
+            placeholder="Product Price"
+            ngModel="{{ productData?.price }}"
+          />
+          <label class="input-label">Product Price</label>
+        </div>
       </div>
-      <div class="cell">
-        <span>PRICE</span>
-        <input
-          type="text"
-          class="form-input"
-          placeholder="ENTER PRODUCT PRICE"
-          name="price"
-          ngModel="{{ productData?.price }}"
-        />
+      <div class="form-section">
+        <div class="input">
+          <input
+            type="text"
+            class="input-field"
+            name="category"
+            placeholder="Product Category"
+            ngModel="{{ productData?.category }}"
+          />
+          <label class="input-label">Product Category</label>
+        </div>
+        <div class="input">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Product Color"
+            name="color"
+            ngModel="{{ productData?.color }}"
+          />
+          <label class="input-label">Product Color</label>
+        </div>
       </div>
-    </div>
-    <div class="form-section">
-      <div class="cell">
-        <span>CATEGORY</span>
-        <input
-          type="text"
-          class="form-input"
-          placeholder="ENTER PRODUCT CATEGORY"
-          name="category"
-          ngModel="{{ productData?.category }}"
-        />
+      <div class="form-section">
+        <div class="input1">
+          <textarea
+            type="text"
+            class="input-field"
+            name="description"
+            placeholder="Product Description"
+            ngModel="{{ productData?.description }}"
+          ></textarea>
+          <label class="input-label">Product Description</label>
+        </div>
       </div>
-      <div class="cell">
-        <span>COLOR</span>
-        <input
-          type="text"
-          class="form-input"
-          placeholder="ENTER PRODUCT COLOR"
-          name="color"
-          ngModel="{{ productData?.color }}"
-        />
+      <div class="form-section">
+        <div class="input1">
+          <input
+            type="text"
+            class="input-field"
+            name="image"
+            placeholder="Image URL"
+            ngModel="{{ productData?.image }}"
+          />
+          <label class="input-label">Product Image URL</label>
+        </div>
       </div>
-    </div>
-    <div class="form-section">
-      <div class="cell">
-        <span>DESCRIPTION</span>
-        <textarea
-          rows="10"
-          type="text"
-          class="form-input"
-          placeholder="ENTER PRODUCT DESCRIPTION"
-          name="description"
-          ngModel="{{ productData?.description }}"
-        ></textarea>
+      <div class="action">
+        <button class="action-button">UPDATE PRODUCT</button>
       </div>
-    </div>
-    <div class="form-section">
-      <div class="cell">
-        <span>IMAGE URL</span>
-        <input
-          type="text"
-          class="form-input"
-          placeholder="ENTER PRODUCT IMAGE URL"
-          name="image"
-          ngModel="{{ productData?.image }}"
-        />
-      </div>
-    </div>
-    <button class="update-button">UPDATE PRODUCT</button>
-  </form>
+    </form>
+  </div>
 </div>

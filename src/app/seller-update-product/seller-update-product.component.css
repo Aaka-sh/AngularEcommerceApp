@@ -1,79 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 .update-product {
-  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: white;
   width: 100vw;
-  overflow-x: hidden;
-  padding: 30px;
+  padding: 80px 50px 50px 50px;
+  background: linear-gradient(
+    180deg,
+    #000000,
+    #000000,
+    #000000,
+    #0f172a,
+    #263458,
+    #1c3160,
+    #1e2a4b,
+    #0f172a,
+    #000000
+  );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.update-product .common-form .form-section {
+.update-product .container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.update-product .container2 h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+/* iOS Reset */
+input {
+  appearance: none;
+  border-radius: 0;
+}
+
+.card {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
   width: 90%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(#999, 0.25);
+  padding: 0.75rem;
+}
+
+.card-form {
+  padding: 2rem 1rem 0;
+}
+
+.update-product .card .card-form .form-section {
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
 }
 
-.update-product .common-form .form-section .cell .form-input {
-  height: 40px;
-  margin: 18px 0;
-}
-
-.update-product .common-form .form-section .cell {
-  width: 100%;
-  margin: 0px 10px 0px 10px;
-}
-
-.update-product .common-form .form-section .cell span {
-  font-weight: bold;
-}
-
-.update-product .common-form .form-section .cell input {
-  height: 100%;
-  width: 100%;
-  outline: none;
-  padding: 0px 15px 0px 15px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #333;
-  border: 1.5px solid #c7bebe;
-  border-bottom-width: 2.5px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.update-product .common-form .form-section .cell textarea {
-  width: 100%;
-  outline: none;
-  padding: 0 15px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #333;
-  border: 1.5px solid #c7bebe;
-  border-bottom-width: 2.5px;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.update-product .common-form .update-button {
-  width: 60%;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  font-size: 1.1em;
-  text-transform: uppercase;
-  font-family: calibri;
-  border-radius: 3px;
-  border: 2px solid #5d5d5d;
-  padding: 0.3rem 0.6rem;
-  box-shadow: 0.5px 0.5px 0 0 #5d5d5d, 1px 1px 0 0 #5d5d5d,
-    1.5px 1.5px 0 0 #5d5d5d, 2px 2px 0 0 #5d5d5d, 2.5px 2.5px 0 0 #5d5d5d,
-    3px 3px 0 0 #5d5d5d, 3.5px 3.5px 0 0 #5d5d5d, 4px 4px 0 0 #5d5d5d,
-    4.5px 4.5px 0 0 #5d5d5d, 5px 5px 0 0 #5d5d5d;
+.input {
+  width: 48%;
+  display: flex;
+  flex-direction: column-reverse;
   position: relative;
-  inset: 0;
-  cursor: pointer;
-  transform: rotateX(0), rotateY(0) rotateZ(0);
-  display: inline-block;
-  outline: 2px dashed transparent;
-  transition: all 600ms ease;
+  padding-top: 1.5rem;
+  & + .input {
+    margin-top: 0;
+  }
 }
+
+.input1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  padding-top: 1.5rem;
+  & + .input {
+    margin-top: 0;
+  }
+}
+
+.input-label {
+  color: #8597a3;
+  position: absolute;
+  top: 1.5rem;
+  transition: 0.25s ease;
+}
+
+.input-field {
+  border: 0;
+  z-index: 1;
+  background-color: transparent;
+  border-bottom: 2px solid #eee;
+  font: inherit;
+  font-size: 1rem;
+  padding: 0.25rem 0;
+  &:focus,
+  &:valid {
+    outline: 0;
+    border-bottom-color: #000000;
+    & + .input-label {
+      color: #000000;
+      transform: translateY(-1.5rem);
+    }
+  }
+}
+
+.action {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-button {
+  font: inherit;
+  font-size: 1rem;
+  padding: 0.4em;
+  width: 20%;
+  font-weight: 500;
+  background-color: #0d1b2a;
+  border-radius: 6px;
+  color: #fff;
+  border: 0;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.card-info {
+  padding: 1rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #8597a3;
+  a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+  }
+}
+
+/* NEW CHANGES END */

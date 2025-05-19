@@ -4,6 +4,7 @@ import { cart, priceSummary } from '../data-type';
 import { Router } from '@angular/router';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-cart-page',
