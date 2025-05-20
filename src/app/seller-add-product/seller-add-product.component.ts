@@ -6,12 +6,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-seller-add-product',
   standalone: false,
-
   templateUrl: './seller-add-product.component.html',
   styleUrl: './seller-add-product.component.css',
 })
 export class SellerAddProductComponent implements OnInit {
   addProductMessage: string | undefined;
+  addProductError: string | undefined;
   constructor(private route: Router, private product: ProductService) {}
 
   ngOnInit(): void {}
@@ -24,9 +24,9 @@ export class SellerAddProductComponent implements OnInit {
       data.description === '' ||
       data.image === ''
     ) {
-      this.addProductMessage = 'Please enter all the details';
+      this.addProductError = 'Please enter all the details';
       setTimeout(() => {
-        this.addProductMessage = undefined;
+        this.addProductError = undefined;
       }, 3000);
       return;
     } else {

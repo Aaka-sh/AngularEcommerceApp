@@ -42,7 +42,7 @@
       "name": "iPhone 13",
       "price": "69000",
       "category": "Mobile Phone",
-      "color": "Black",
+      "color": "White",
       "description": "6.1-inch Super Retina XDR display, Cinematic mode, Advanced dual-camera system with 12MP Wide and Ultra Wide cameras, Photographic Styles, Smart HDR 4, Night mode, 4K Dolby Vision HDR recording, 12MP TrueDepth front camera with Night mode, A15 Bionic chip for lightning-fast performance",
       "image": "https://vasanthandco.in/images/productimages/1903__product__Mobiles__apple-mobile-iphone-13-blue-128gb-2.png",
       "id": "b4a2"
@@ -127,6 +127,24 @@
       "color": "White",
       "description": "iPhone 16 Plus 256 GB: 5G Mobile Phone with Camera Control, A18 Chip and a Big Boost in Battery Life. Works with AirPods; White",
       "image": "https://m.media-amazon.com/images/I/61Brhn4WBIL._SX679_.jpg"
+    },
+    {
+      "id": "d459",
+      "name": "Airpods 4 ANC",
+      "price": "18000",
+      "category": "Earphones",
+      "color": "White",
+      "description": "Active Noise Cancellation, Transparency Mode, Adaptive Audio, Conversation Awareness, Voice Isolation, Personalized Spatial Audio, H2 chip, IP54 water and sweat resistance, up to 30 hours battery with charging case.",
+      "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-4-hero-select-202409_FMT_WHH?wid=752&hei=636&fmt=jpeg&qlt=90&.v=NFNYUnZEZG9WdmVKZzdXRW9IVzNoSXFGRDgrV1lYUUJja0JzaUZERUtaV0xlT0luZStNbmdWL2hzZnEwaHZYMnNudUNUdVBZcDJSbEgrd2pPbDFhNVk4Y0dKOSsweEZka1JxVzk5SFNyRjIrUm8xd3BPWU43Z0lDcmhIa0FsS0o"
+    },
+    {
+      "name": "iPad Air",
+      "price": "59900",
+      "category": "Tablet",
+      "color": "Space Grey",
+      "description": "\niPad Air. With an immersive 10.9-inch Liquid Retina display. The breakthrough Apple M1 chip delivers faster performance, making iPad Air a creative and mobile gaming powerhouse. Featuring Touch ID, advanced cameras, USB-C, Wi-Fi 6, capability for blazing-fast 5G, and support for Magic Keyboard and Apple Pencil (2nd generation).",
+      "image": "https://www.imagineonline.store/cdn/shop/files/iPad_Air_5thGen_Wi-Fi_Space_Gray_PDP_Image_Position-1b__en-IN.jpg?v=1705479535&width=823",
+      "id": "1ecb"
     }
   ],
   "users": [
@@ -177,30 +195,24 @@
       "username": "kalel",
       "email": "kalel@gmail.com",
       "password": "@Kalel123"
+    },
+    {
+      "id": "3f21",
+      "username": "mohit",
+      "email": "mohit@gmail.com",
+      "password": "Mohit@123"
     }
   ],
   "cart": [
     {
-      "id": "e054",
-      "name": "Macbook Pro",
-      "price": "310990",
-      "category": "Laptops",
-      "color": "Black",
-      "description": "10-core CPU with 4 performance cores and 6 efficiency cores, 10-core GPU, Hardware-accelerated ray tracing, 16-core Neural Engine, 120GB/s memory bandwidth, Hardware-accelerated H.264, HEVC, ProRes and ProRes RAW, Video decode engine, Video encode engine",
-      "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp14-spaceblack-select-202410?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1728916305295",
-      "quantity": 1,
-      "productId": "e341",
-      "userId": "6397"
-    },
-    {
-      "id": "80fe",
+      "id": "603f",
       "name": "iPad Air - 5th Gen",
       "price": "55600",
       "category": "Tablets",
       "color": "Pink",
       "description": "Immersive 27.69 cm (10.9″) Liquid Retina display, Touch ID, advanced cameras, superfast 5G and Wi-Fi 6, and a USB-C connector, Supercharged by Apple M1 Chip, 12MP Ultra Wide camera with Centre Stage",
       "image": "https://media-ik.croma.com/prod/https://media.croma.com/image/upload/v1685968471/Croma%20Assets/Computers%20Peripherals/Tablets%20and%20iPads/Images/264353_nx2kb9.png?tr=w-600",
-      "quantity": 2,
+      "quantity": 1,
       "productId": "cc66",
       "userId": "6397"
     }
@@ -237,6 +249,14 @@
       "contact": "9988998899",
       "totalPrice": 311090,
       "userId": "8506"
+    },
+    {
+      "id": "53f7",
+      "email": "peter@user.com",
+      "address": "Electronic City Phase 2",
+      "contact": "9988998899",
+      "totalPrice": 422290,
+      "userId": "6397"
     }
   ]
 }

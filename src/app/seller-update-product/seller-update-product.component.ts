@@ -7,13 +7,14 @@ import { product } from '../data-type';
 @Component({
   selector: 'app-seller-update-product',
   standalone: false,
-
   templateUrl: './seller-update-product.component.html',
   styleUrl: './seller-update-product.component.css',
 })
 export class SellerUpdateProductComponent {
   //message to be displayed when the update is successful
   updateProductMessage: undefined | string;
+  //message to be displayed when the update form has an error
+  updateProductError: undefined | string;
   //this variable will store all the product data (type is product interface)
   productData: undefined | product;
   //activated route is a service that allows to access information about the currently
@@ -36,13 +37,29 @@ export class SellerUpdateProductComponent {
   }
 
   submit(data: any) {
+    //checking if all the fields are filled
+    if (
+      data.name === '' ||
+      String(data.price) === '' ||
+      data.category === '' ||
+      data.color === '' ||
+      data.description === '' ||
+      data.image === ''
+    ) {
+      this.updateProductError = 'Please enter all the details';
+      setTimeout(() => {
+        this.updateProductError = undefined;
+      }, 3000);
+      return;
+    }
+    //if the productData is available then only set the id
     if (this.productData) {
       data.id = this.productData.id;
     }
     //calling the update product function from the product instance
     this.product.updateProduct(data).subscribe((result) => {
       if (result) {
-        this.updateProductMessage = 'PRODUCT IS SUCCESSFULLY UPDATED';
+        this.updateProductMessage = 'Product is successfully updated';
       }
     });
 

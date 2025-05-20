@@ -26,8 +26,9 @@
     <button *ngIf="!removeCart" class="product-button" (click)="addToCart()">
       Add to Cart
     </button>
-    <button class="product-button">
-      <a routerLink="/cart-page">Go to Cart</a>
+    <button class="product-button" routerLink="/cart-page">
+      <!-- <a routerLink="/cart-page">Go to Cart</a> -->
+      Go to Cart
     </button>
   </div>
 </div>

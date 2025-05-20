@@ -63,6 +63,11 @@ export class SellerAuthComponent implements OnInit {
   //seller login function
   login(data: signUp): void {
     //console.warn(data);
+    if (data.email == '' || data.password == '') {
+      alert('Please fill all the fields');
+      this.authError = 'Please fill all the fields';
+      return;
+    }
     this.seller.userLogin(data);
     this.seller.isLoginEmitter.subscribe((isError) => {
       console.warn(isError);

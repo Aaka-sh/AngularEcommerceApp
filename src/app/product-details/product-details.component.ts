@@ -60,6 +60,8 @@ export class ProductDetailsComponent implements OnInit {
       });
   }
 
+  openCart() {}
+
   handleQuantity(val: string) {
     if (this.productQuantity <= 5 && val == 'add') {
       this.productQuantity += 1;

@@ -2,13 +2,15 @@
   <div class="container2">
     <h1 class="typing-text1">ADD NEW PRODUCT</h1>
   </div>
-  <p class="message-p">{{ addProductMessage }}</p>
+
   <div class="card">
     <form
       #addProduct="ngForm"
       class="card-form"
       (ngSubmit)="submit(addProduct.value)"
     >
+      <p *ngIf="addProductError" class="error-p">{{ addProductError }}</p>
+      <p *ngIf="addProductMessage" class="message-p">{{ addProductMessage }}</p>
       <div class="form-section">
         <div class="input">
           <input
